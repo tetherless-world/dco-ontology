@@ -1410,18 +1410,6 @@ dco:FieldStudy
       a       owl:Class ;
       rdfs:label "Field Study"@en-US ;
       rdfs:subClassOf owl:Thing , dco:Activity , core:Project , dco:Object ;
-      rdfs:subClassOf
-              [] ;
-      rdfs:subClassOf
-              [] ;
-      rdfs:subClassOf
-              [] ;
-      rdfs:subClassOf
-              [] ;
-      rdfs:subClassOf
-              [] ;
-      rdfs:subClassOf
-              [] ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
