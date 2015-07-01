@@ -388,9 +388,6 @@ dco:lastModifiedAtTime
       rdfs:label "last modified at time" ;
       rdfs:range xsd:dateTime .
 
-dco:hasLogitude
-      a       owl:AnnotationProperty .
-
 dco:modifiedOn
       a       owl:DatatypeProperty ;
       rdfs:domain dco:ProjectUpdateModificationNote ;
