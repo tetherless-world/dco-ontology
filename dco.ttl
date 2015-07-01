@@ -58,7 +58,6 @@
 @prefix skos2:   <http://www.w3.org/2008/05/skos#> .
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix core:    <http://vivoweb.org/ontology/core#> .
 @prefix local:   <http://vivo.cornell.edu/ontology/local#> .
 @prefix vitro-public:  <http://vitro.mannlib.cornell.edu/ns/vitro/public#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
@@ -94,7 +93,7 @@ dco:Scientist
 dco:Artwork
       a       owl:Class ;
       rdfs:label "Artwork"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:Image , core:InformationResource ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:Image , vivo:InformationResource ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -114,7 +113,7 @@ dco:expectedUses
 dco:Poster
       a       owl:Class ;
       rdfs:label "Poster"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , core:InformationResource ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
@@ -148,7 +147,7 @@ dco:physicalLocation
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -215,7 +214,7 @@ dco:hasLongitude
 dco:Professor
       a       owl:Class ;
       rdfs:label "Professor"@en-US ;
-      rdfs:subClassOf foaf:Person , core:FacultyMember , owl:Thing , foaf:Agent , dco:Object ;
+      rdfs:subClassOf foaf:Person , vivo:FacultyMember , owl:Thing , foaf:Agent , dco:Object ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
@@ -249,7 +248,7 @@ dco:dcoIdFor
 dco:GovernmentReport
       a       owl:Class ;
       rdfs:label "Government Report"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , core:InformationResource , bibo:Report ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:Report ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
@@ -314,7 +313,7 @@ dco:Collaboration
 
 dco:hasProjectUpdate
       a       owl:ObjectProperty ;
-      rdfs:domain core:Project ;
+      rdfs:domain vivo:Project ;
       rdfs:label "Project Update"@en-US ;
       rdfs:range dco:ProjectUpdate ;
       ero:IAO_0000112 "Q1 Fiscal Year 2015 Project Update for Project DCO Data Science"^^xsd:string ;
@@ -441,7 +440,7 @@ dco:modifiedBy
 dco:WebArticle
       a       owl:Class ;
       rdfs:label "Web Article"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , core:InformationResource , bibo:Article ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:Article ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
@@ -459,7 +458,7 @@ dco:WebArticle
 dco:Broadcast
       a       owl:Class ;
       rdfs:label "Broadcast"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:AudioDocument , core:InformationResource ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:AudioDocument , vivo:InformationResource ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
@@ -493,7 +492,7 @@ dco:relatedProject
 dco:ResearchCommunity
       a       owl:Class ;
       rdfs:label "Research Community"@en-US ;
-      rdfs:subClassOf core:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
+      rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
       vitro:displayLimitAnnot
               "-1"^^xsd:int ;
       vitro:displayRankAnnot
@@ -595,7 +594,7 @@ dco:containsBook
 dco:Chart
       a       owl:Class ;
       rdfs:label "Chart"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:Image , core:InformationResource ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:Image , vivo:InformationResource ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -608,7 +607,7 @@ dco:Chart
 dco:MagazineArticle
       a       owl:Class ;
       rdfs:label "Magazine Article"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , core:InformationResource , bibo:Article ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:Article ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
@@ -724,9 +723,9 @@ dco:Object
 
 dco:relatedDataset
       a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:domain core:Project ;
+      rdfs:domain vivo:Project ;
       rdfs:label "Related datasets"@en-US ;
-      rdfs:range core:Dataset ;
+      rdfs:range vivo:Dataset ;
       vitro:collateBySubclassAnnot
               "true"^^xsd:boolean ;
       vitro:displayLimitAnnot
@@ -934,10 +933,10 @@ dco:associatedDCOCommunity
 
 dco:dateModified
       a       owl:ObjectProperty ;
-      rdfs:domain core:InformationResource ;
+      rdfs:domain vivo:InformationResource ;
       rdfs:label "date modified"@en-US ;
-      rdfs:range core:DateTimeValue ;
-      rdfs:subPropertyOf owl:topObjectProperty , core:dateTimeValue , dco:dateModified ;
+      rdfs:range vivo:DateTimeValue ;
+      rdfs:subPropertyOf owl:topObjectProperty , vivo:dateTimeValue , dco:dateModified ;
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -1085,7 +1084,7 @@ dco:ReportingYear
 dco:ResearchAdministration
       a       owl:Class ;
       rdfs:label "Research Administration"@en-US ;
-      rdfs:subClassOf core:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
+      rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
       vitro:displayLimitAnnot
               "-1"^^xsd:int ;
       vitro:displayRankAnnot
@@ -1099,7 +1098,7 @@ dco:ResearchAdministration
 
 dco:runningTitle
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain core:Project ;
+      rdfs:domain vivo:Project ;
       rdfs:label "running title"@en-US ;
       vitro:descriptionAnnot
               "Shortened version of project title"^^xsd:string ;
@@ -1233,7 +1232,7 @@ dco:hasFile
 dco:GeoSample
       a       owl:Class ;
       rdfs:label "GeoSample"@en-US ;
-      rdfs:subClassOf core:InformationResource ;
+      rdfs:subClassOf vivo:InformationResource ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom rdfs:Literal ;
@@ -1378,7 +1377,7 @@ dco:sourceDataType
 dco:Hearing
       a       owl:Class ;
       rdfs:label "Hearing"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , core:InformationResource , bibo:Report ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:Report ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -1409,7 +1408,7 @@ dco:temperature
 dco:FieldStudy
       a       owl:Class ;
       rdfs:label "Field Study"@en-US ;
-      rdfs:subClassOf owl:Thing , dco:Activity , core:Project , dco:Object ;
+      rdfs:subClassOf owl:Thing , dco:Activity , vivo:Project , dco:Object ;
       rdfs:subClassOf
               [] ;
       rdfs:subClassOf
@@ -1433,9 +1432,9 @@ dco:FieldStudy
 
 dco:isDatasetOf
       a       owl:ObjectProperty ;
-      rdfs:domain core:Dataset ;
+      rdfs:domain vivo:Dataset ;
       rdfs:label "Is Dataset Of"@en-US ;
-      rdfs:range core:Project ;
+      rdfs:range vivo:Project ;
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       owl:inverseOf dco:relatedDataset .
@@ -1480,7 +1479,7 @@ dco:distributionFor
       a       owl:ObjectProperty ;
       rdfs:domain dcat:Distribution ;
       rdfs:label "Distribution (attachment or links) for"@en-US ;
-      rdfs:range core:InformationResource ;
+      rdfs:range vivo:InformationResource ;
       rdfs:subPropertyOf owl:topObjectProperty , dco:distributionFor ;
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
@@ -1518,7 +1517,7 @@ dco:receivedGrant
       a       owl:ObjectProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "received grant"@en-US ;
-      rdfs:range core:Grant ;
+      rdfs:range vivo:Grant ;
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -1627,7 +1626,7 @@ dco:forProject
       a       owl:ObjectProperty ;
       rdfs:domain dco:ProjectUpdate ;
       rdfs:label "For Project"@en-US ;
-      rdfs:range core:Project ;
+      rdfs:range vivo:Project ;
       ero:IAO_0000112 "Q1 Fiscal Year 2015 Project Update for Project DCO Data Science"^^xsd:string ;
       vitro:descriptionAnnot
               "ProjectUpdate forProject Project hasProjectUpdate ProjectUpdate"^^xsd:string ;
@@ -1673,7 +1672,7 @@ dco:hasDataset
 
 dco:usesInstrument
       a       owl:ObjectProperty ;
-      rdfs:domain core:Project ;
+      rdfs:domain vivo:Project ;
       rdfs:label "Has instrument"@en-US ;
       rdfs:range ero:ERO_0000004 ;
       vitro:descriptionAnnot
@@ -1720,7 +1719,7 @@ dco:hasUnit
 dco:ResearchAdvisoryCommittee
       a       owl:Class ;
       rdfs:label "Research Advisory Committee"@en-US ;
-      rdfs:subClassOf core:ResearchOrganization , foaf:Organization , foaf:Agent , owl:Thing , dco:Object ;
+      rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , foaf:Agent , owl:Thing , dco:Object ;
       vitro:displayLimitAnnot
               "-1"^^xsd:int ;
       vitro:displayRankAnnot
@@ -1735,7 +1734,7 @@ dco:ResearchAdvisoryCommittee
 dco:JournalArticle
       a       owl:Class ;
       rdfs:label "Journal Article"@en-US ;
-      rdfs:subClassOf bibo:Document , bibo:AcademicArticle , owl:Thing , dco:Object , core:InformationResource , bibo:Article ;
+      rdfs:subClassOf bibo:Document , bibo:AcademicArticle , owl:Thing , dco:Object , vivo:InformationResource , bibo:Article ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
@@ -1753,7 +1752,7 @@ dco:JournalArticle
 dco:NewspaperArticle
       a       owl:Class ;
       rdfs:label "Newspaper Article"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , core:InformationResource , bibo:Article ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:Article ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -1766,7 +1765,7 @@ dco:NewspaperArticle
 dco:hasDataType
       a       owl:ObjectProperty ;
       rdfs:comment "A dataset has one or more data types." ;
-      rdfs:domain core:Dataset ;
+      rdfs:domain vivo:Dataset ;
       rdfs:label "has data type"@en-US ;
       rdfs:range dco:DataType ;
       vitro:displayLimitAnnot
@@ -1794,7 +1793,7 @@ dco:DCOID
 
 dco:grantRecipient
       a       owl:ObjectProperty ;
-      rdfs:domain core:Grant ;
+      rdfs:domain vivo:Grant ;
       rdfs:label "recipient"@en-US ;
       rdfs:range foaf:Person ;
       vitro:displayLimitAnnot
@@ -1814,7 +1813,7 @@ dco:grantRecipient
 dco:BookSeries
       a       owl:Class ;
       rdfs:label "Book Series"@en-US ;
-      rdfs:subClassOf bibo:Collection , owl:Thing , dco:Object , bibo:Series , core:InformationResource ;
+      rdfs:subClassOf bibo:Collection , owl:Thing , dco:Object , bibo:Series , vivo:InformationResource ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -1856,7 +1855,7 @@ dco:instrumentUsedBy
       a       owl:ObjectProperty ;
       rdfs:domain ero:ERO_0000004 ;
       rdfs:label "Instrument used in (e.g. project)"@en-US ;
-      rdfs:range core:Project ;
+      rdfs:range vivo:Project ;
       vitro:descriptionAnnot
               "Instrument (or equipment) used by project or field study"^^xsd:string ;
       vitro:displayLimitAnnot
@@ -1950,7 +1949,7 @@ dco:hasDcoId
 
 dco:createdInstrument
       a       owl:ObjectProperty ;
-      rdfs:domain core:Project ;
+      rdfs:domain vivo:Project ;
       rdfs:label "Created Instrument"@en-US ;
       rdfs:range ero:ERO_0000004 ;
       vitro:displayLimitAnnot
@@ -1973,7 +1972,7 @@ dco:instrumentCreatedBy
       a       owl:ObjectProperty ;
       rdfs:domain ero:ERO_0000004 ;
       rdfs:label "Instrument Created By"@en-US ;
-      rdfs:range core:Project ;
+      rdfs:range vivo:Project ;
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -1991,7 +1990,7 @@ dco:instrumentCreatedBy
 dco:LegalRuling
       a       owl:Class ;
       rdfs:label "Legal Ruling"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , core:InformationResource , bibo:LegalDocument ;
+      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:LegalDocument ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -2039,7 +2038,7 @@ dco:openToJournalists
 dco:PhDStudent
       a       owl:Class ;
       rdfs:label "Ph.D. Student"@en-US ;
-      rdfs:subClassOf core:GraduateStudent ;
+      rdfs:subClassOf vivo:GraduateStudent ;
       vitro:displayLimitAnnot
               "-1"^^xsd:int ;
       vitro:displayRankAnnot
@@ -2138,14 +2137,14 @@ dco:dataTypeSubjectArea
       rdfs:domain dco:DataType ;
       rdfs:label "has data type subject area" ;
       rdfs:range skos:Concept ;
-      rdfs:subPropertyOf core:hasSubjectArea .
+      rdfs:subPropertyOf vivo:hasSubjectArea .
 
 dco:datePublished
       a       owl:ObjectProperty ;
-      rdfs:domain core:InformationResource ;
+      rdfs:domain vivo:InformationResource ;
       rdfs:label "date published"@en-US ;
-      rdfs:range core:DateTimeValue ;
-      rdfs:subPropertyOf owl:topObjectProperty , dco:datePublished , core:dateTimeValue ;
+      rdfs:range vivo:DateTimeValue ;
+      rdfs:subPropertyOf owl:topObjectProperty , dco:datePublished , vivo:dateTimeValue ;
       vitro:customEntryFormAnnot
               "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.DateTimeValueFormGenerator"^^xsd:string ;
       vitro:displayLimitAnnot
@@ -2176,7 +2175,7 @@ dco:homeCountry
       a       owl:ObjectProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "Nationality"@en-US ;
-      rdfs:range core:Country ;
+      rdfs:range vivo:Country ;
       rdfs:subPropertyOf owl:topObjectProperty , dco:homeCountry ;
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
@@ -2206,7 +2205,7 @@ dco:networkId
 
 dco:authorName
       a       owl:DatatypeProperty ;
-      rdfs:domain core:InformationResource ;
+      rdfs:domain vivo:InformationResource ;
       rdfs:label "other authors"@en-US ;
       rdfs:subPropertyOf owl:topDataProperty , dco:authorName ;
       vitro:descriptionAnnot
@@ -2290,7 +2289,7 @@ dco:modificationNote
 
 dco:hasDistribution
       a       owl:ObjectProperty ;
-      rdfs:domain core:InformationResource ;
+      rdfs:domain vivo:InformationResource ;
       rdfs:label "distribution (attachments or links)"@en-US ;
       rdfs:range dcat:Distribution ;
       rdfs:subPropertyOf dco:hasDistribution , owl:topObjectProperty ;
@@ -2312,7 +2311,7 @@ dco:hasDistribution
 
 dco:projectLink
       a       owl:DatatypeProperty ;
-      rdfs:domain core:Project ;
+      rdfs:domain vivo:Project ;
       rdfs:label "Information Links"@en-US ;
       rdfs:range xsd:string ;
       vitro:descriptionAnnot
@@ -2358,7 +2357,7 @@ dco:forProjectUpdate
 
 dco:projectUpdates
       a       owl:DatatypeProperty ;
-      rdfs:domain core:Project ;
+      rdfs:domain vivo:Project ;
       rdfs:label "project updates"@en-US ;
       rdfs:range xsd:string ;
       vitro:displayRankAnnot
