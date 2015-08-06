@@ -91,7 +91,7 @@ dco:yearOfPublication
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
-dco:physicalLocation
+dco:PhysicalLocation
       a       owl:Class ;
       rdfs:label "Physical Location"@en-US ;
       rdfs:subClassOf
@@ -217,7 +217,7 @@ dco:hasPhysicalLocation
       a       owl:ObjectProperty ;
       rdfs:domain dco:FieldStudy ;
       rdfs:label "Field sites"@en-US ;
-      rdfs:range dco:physicalLocation ;
+      rdfs:range dco:PhysicalLocation ;
       vitro:descriptionAnnot
               "Field site e.g. of a field study"^^xsd:string ;
       vitro:displayLimitAnnot
@@ -715,7 +715,7 @@ dco:hasMaterial
 
 dco:pressure
       a       owl:DatatypeProperty ;
-      rdfs:domain dco:physicalLocation ;
+      rdfs:domain dco:PhysicalLocation ;
       rdfs:label "pressure"@en-US ;
       rdfs:range xsd:string ;
       vitro:descriptionAnnot
@@ -899,7 +899,7 @@ dco:dateModified
 
 dco:depth
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain dco:physicalLocation ;
+      rdfs:domain dco:PhysicalLocation ;
       rdfs:label "depth (meters)"@en-US ;
       rdfs:range xsd:string ;
       vitro:descriptionAnnot
@@ -1073,7 +1073,7 @@ dco:downloadURL
 
 dco:isPhysicalLocationOf
       a       owl:ObjectProperty ;
-      rdfs:domain dco:physicalLocation ;
+      rdfs:domain dco:PhysicalLocation ;
       rdfs:label "is field site of"@en-US ;
       rdfs:range dco:FieldStudy ;
       vitro:descriptionAnnot
@@ -1336,7 +1336,7 @@ dco:Hearing
 
 dco:temperature
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain dco:physicalLocation ;
+      rdfs:domain dco:PhysicalLocation ;
       rdfs:label "temperature"@en-US ;
       rdfs:range xsd:string ;
       vitro:descriptionAnnot
@@ -1826,7 +1826,7 @@ dco:speaksLanguage
 
 dco:altitude
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain dco:physicalLocation ;
+      rdfs:domain dco:PhysicalLocation ;
       rdfs:label "altitude (meters)"@en-US ;
       rdfs:range xsd:string ;
       vitro:descriptionAnnot
