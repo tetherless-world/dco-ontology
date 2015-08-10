@@ -1,0 +1,1617 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vivo:    <http://vivoweb.org/ontology/core#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+@prefix dco:     <http://info.deepcarbon.net/schema#> .
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+dco:ProjectUpdateModificationNote
+      obo:IAO_0000112 "Project Update DCO-DS Q1 FY2015 is modified by Professor Fox on 2015-02-12"^^xsd:string ;
+      obo:IAO_0000115 "Project update is modified by a Person on a given day with a descriptive label"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate modified ProjectUpdateModified modifiedBy Professor Fox; moifiedOn 2015-02-12 with a descriptive label"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Scientist
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Artwork
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Poster
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:yearOfPublication
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:PhysicalLocation
+      obo:IAO_0000115 "Physical location including lat, long, depth or altitude"^^xsd:string ;
+      vitro:descriptionAnnot
+              "Physical location including lat, long, depth or altitude"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouplocations> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:referencedByUpdate
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> ;
+      vitro:publicDescriptionAnnot
+              "The Instrument is referenced by a Project Updated"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "false"^^xsd:boolean .
+
+dco:hasLongitude
+      vitro:descriptionAnnot
+              "Longitude (in decimal units, e.g. -72.258564). Enter only one value!"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Longitude (in decimal units, e.g. -72.258564). Enter only one value!"^^xsd:string .
+
+dco:Professor
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:DataType
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:dcoIdFor
+      vitro:displayLimitAnnot
+              "5"^^xsd:int .
+
+dco:GovernmentReport
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:hasPhysicalLocation
+      vitro:descriptionAnnot
+              "Field site e.g. of a field study"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Field site e.g. of a field study"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:Collaboration
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:hasProjectUpdate
+      obo:IAO_0000112 "Q1 Fiscal Year 2015 Project Update for Project DCO Data Science"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate forProject Project hasProjectUpdate ProjectUpdate"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vitro.mannlib.cornell.edu/ns/default#n6618> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Updates for this Project"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:leaderForFieldwork
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:hasReportingYear
+      obo:IAO_0000112 "Reporting Year 2015 for ABC Corporation October 1, 2014 to September 31, 2015"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ReportingYear forOrganization Organization"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vitro.mannlib.cornell.edu/ns/default#n2605> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "An Organization has a Reporting Year for reporting purposes"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "false"^^xsd:boolean .
+
+dco:modifiedOn
+      obo:IAO_0000112 "Project Update Modified on 2015-02-12"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdateModified modifiedOn date YYYY-MM-DD"^^xsd:string ;
+      vitro:displayRankAnnot
+              "2"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Update Modified on YYYY-MM-DD"^^xsd:string .
+
+dco:modifiedBy
+      obo:IAO_0000112 "Project Update Modified by Professor Fox"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdateModified modifiedBy Professor Fox"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Update modified by Person"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:WebArticle
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Broadcast
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:relatedProject
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:ResearchCommunity
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:isDCOPublication
+      vitro:descriptionAnnot
+              "Is this work a result of DCO-related research? (enter \"YES\" or \"NO\" only)"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Is this work a result of DCO-related research? (enter \"YES\" or \"NO\" only)"^^xsd:string .
+
+dco:forOrganization
+      obo:IAO_0000112 "Reporting Year 2015 for ABC Corporation October 1, 2014 to September 31, 2015"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ReportingYear forOrganization Organization"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Fiscal Year for Organization"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:inLanguage
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:dcoId
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dco:containsBook
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:Chart
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:MagazineArticle
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Staff
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Analysis
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://deepcarbon.net/vivo/individual/vitroClassGroupdcoactivities> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Parameter
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupParameter> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:isSampleFor
+      vitro:displayLimitAnnot
+              "5"^^xsd:int .
+
+dco:Activity
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Object
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:relatedDataset
+      vitro:collateBySubclassAnnot
+              "true"^^xsd:boolean ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Datasets related to this entity"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:skype
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:hasMaterial
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:pressure
+      vitro:descriptionAnnot
+              "Pressure at which activity is conducted"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vitro.mannlib.cornell.edu/ns/default#n1591> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Pressure at which activity is conducted"^^xsd:string .
+
+dco:hasVessel
+      vitro:descriptionAnnot
+              "Research Vessel associated with field study"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Research Vessel associated with field study"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+<http://info.deepcarbon.net/schema>
+      vitro:ontologyPrefixAnnot
+              "dco"^^xsd:string .
+
+dco:hasSampleAge
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Outreach
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGroupevents> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Technician
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:hasLatitude
+      vitro:descriptionAnnot
+              "Latitude (in decimal units, e.g. 43.777874). Enter only one value!"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Latitude (in decimal units, e.g. 43.777874). Enter only one value!"^^xsd:string .
+
+dco:inOrganization
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:containsChapter
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:associatedDCOCommunity
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#selfEditor> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:dateModified
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:depth
+      vitro:descriptionAnnot
+              "Depth at which activity occurred (meters)"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vitro.mannlib.cornell.edu/ns/default#n1591> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Depth at which activity occurred (meters)"^^xsd:string .
+
+dco:updateText
+      obo:IAO_0000112 "We have made huge strides in determining the impacts of Global Climate Change in the deep ocean"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate updateText string"^^xsd:string ;
+      vitro:displayRankAnnot
+              "3"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Update descriptive text"^^xsd:string .
+
+dco:publishedInSeries
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:startsOn
+      obo:IAO_0000112 "2015-02-12"^^xsd:string ;
+      vitro:descriptionAnnot
+              "FiscalYear startsOn YYYY-MM-DD"^^xsd:string ;
+      vitro:displayRankAnnot
+              "2"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Fiscal Year starts on YYYY-MM-DD"^^xsd:string .
+
+dco:ProjectUpdate
+      obo:IAO_0000112 "Quarterly project update for project DCO Data Science for Fiscal Year 2015"^^xsd:string ;
+      obo:IAO_0000115 "Update to a Project during a Fiscal Year"^^xsd:string ;
+      vitro:descriptionAnnot
+              "Project hasProjectUpdate ProjectUdpate forProject Project"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:vesselTrackingURL
+      vitro:descriptionAnnot
+              "Link to information about vessel"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplinks> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Link to information about vessel"^^xsd:string .
+
+dco:ReportingYear
+      obo:IAO_0000112 "Reporting Year 2015, January 1, 2015 to December 31, 2015"^^xsd:string ;
+      obo:IAO_0000115 "a period of time, usually 12 months, for review purposes and generating annual project report"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate forReportingYear ReportingYear forOrganization Organization; startsOn date; endsOn date"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> .
+
+dco:ResearchAdministration
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:runningTitle
+      vitro:descriptionAnnot
+              "Shortened version of project title"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Shortened version of project title"^^xsd:string .
+
+dco:downloadURL
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:isPhysicalLocationOf
+      vitro:descriptionAnnot
+              "Field site e.g. of a field study"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Field site e.g. of a field study"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:submittedBy
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaddress> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:associatedPublication
+      obo:IAO_0000112 "Publication Update for project DCO-DS for Fiscal Year 2015 includes the publication How Data Science Works"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate associatedPublication Document"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "4"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Publications that are associated with a given Project Update"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:shortName
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaddress> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:hasFile
+      vitro:customEntryFormAnnot
+              "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.AddDistributionGenerator"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:GeoSample
+      obo:IAO_0000115 "Geological sample"^^xsd:string ;
+      vitro:descriptionAnnot
+              "Geological sample"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:forReportingYear
+      obo:IAO_0000112 "Project Update for Reporting Year RY2015"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate forReportingYear RY2015"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "2"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Update for a specific Reporting Year"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:Proceedings
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:fieldworkLeader
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:endsOn
+      obo:IAO_0000112 "Fiscal Year ends on 2015-02-12"^^xsd:string ;
+      vitro:descriptionAnnot
+              "FiscalYear endsOn 2015-02-13"^^xsd:string ;
+      vitro:displayRankAnnot
+              "3"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Fiscal Year ends on YYYY-MM-DD"^^xsd:string .
+
+dco:Hearing
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:temperature
+      vitro:descriptionAnnot
+              "Temperature at which activity is conducted"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vitro.mannlib.cornell.edu/ns/default#n1591> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Temperature at which activity is conducted"^^xsd:string .
+
+dco:FieldStudy
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:isDatasetOf
+      vitro:displayLimitAnnot
+              "5"^^xsd:int .
+
+dco:submittedOn
+      obo:IAO_0000112 "Project Update submitted on 2015-03-05"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate submittedOn 2015-03-05"^^xsd:string ;
+      vitro:displayRankAnnot
+              "3"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Updated submitted on YYYY-MM-DD"^^xsd:string .
+
+dco:PortalGroup
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:distributionFor
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:hasPeople
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaffiliation> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:receivedGrant
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:researchVessel
+      obo:IAO_0000115 "A ship designed and equipped to carry out research at sea. "^^xsd:string ;
+      vitro:descriptionAnnot
+              "A ship designed and equipped to carry out research at sea. "^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:fileFor
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:isVesselFor
+      vitro:descriptionAnnot
+              "Research Vessel associated with field study"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int .
+
+dco:hasElevation
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:forProject
+      obo:IAO_0000112 "Q1 Fiscal Year 2015 Project Update for Project DCO Data Science"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate forProject Project hasProjectUpdate ProjectUpdate"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Select a Project for this Project Update"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:hasDataset
+      vitro:customEntryFormAnnot
+              "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.DCOAddDatasetGenerator"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographic> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Click to upload or link to datasets. Added datasets will be listed under Publications"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:usesInstrument
+      vitro:descriptionAnnot
+              "Instrument (or equipment) used by project or field study"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Instrument (or equipment) used"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:IGSN
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:ResearchAdvisoryCommittee
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouporganizations> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:JournalArticle
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:NewspaperArticle
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:hasDataType
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:DCOID
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> .
+
+dco:grantRecipient
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:BookSeries
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:vesselMMSI
+      vitro:descriptionAnnot
+              "Maritime Mobile Service Identity (MMSI) number"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Maritime Mobile Service Identity (MMSI) number"^^xsd:string .
+
+dco:Engineer
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:instrumentUsedBy
+      vitro:descriptionAnnot
+              "Instrument (or equipment) used by project or field study"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Instrument (or equipment) used by project or field study"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:speaksLanguage
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Language that speaks fluently "^^xsd:string .
+
+dco:altitude
+      vitro:descriptionAnnot
+              "Altitude (above ground) of physical location (meters)"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vitro.mannlib.cornell.edu/ns/default#n1591> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Altitude (above ground) of physical location (meters)"^^xsd:string .
+
+dco:refersToInstrument
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:hasDcoId
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:createdInstrument
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "An instrument created by this project"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:instrumentCreatedBy
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:LegalRuling
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:vesselIMO
+      vitro:descriptionAnnot
+              "International Maritime Organization (IMO) numbers"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "International Maritime Organization (IMO) number"^^xsd:string .
+
+dco:openToJournalists
+      vitro:descriptionAnnot
+              "Site is open to journalists"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Site is open to journalists"^^xsd:string .
+
+dco:PhDStudent
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppeople> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:hasGeoSample
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Has geological samples"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:associatedDCOPortalGroup
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:relatedOrganization
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaffiliation> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:vesselCallSign
+      vitro:descriptionAnnot
+              "Research Vessel call sign"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Research Vessel call sign"^^xsd:string .
+
+dco:datePublished
+      vitro:customEntryFormAnnot
+              "edu.cornell.mannlib.vitro.webapp.edit.n3editing.configuration.generators.DateTimeValueFormGenerator"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:accessURL
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:homeCountry
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:networkId
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> .
+
+dco:authorName
+      vitro:descriptionAnnot
+              "Use this field to enter a single non-DCO author. ONE AUTHOR PER ENTRY"^^xsd:string ;
+      vitro:displayRankAnnot
+              "1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> ;
+      vitro:publicDescriptionAnnot
+              "Use this field to enter a single non-DCO author. ONE AUTHOR PER ENTRY"^^xsd:string .
+
+dco:publishedInBook
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:vesselName
+      vitro:descriptionAnnot
+              "Research Vessel (RV) name"^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Research Vessel (RV) name"^^xsd:string .
+
+dco:modificationNote
+      obo:IAO_0000112 "Q1 FY2015 Project Update Modified by Prof. Fox on 2015-02-12 to add instruments"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate modified ProjectUpdateModified modifiedBy Person; modifiedOn date; label string"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "6"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Update Modified by a person on YYYY-MM-DD with a descriptive label"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:hasDistribution
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:projectLink
+      vitro:descriptionAnnot
+              """Enter a link to further information.
+NOTE: Please strip all formatting before pasting, e.g. by pasting the value into a plain text editor (Textedit, gedit, Textpad, Notepad) before pasting into the textbox below. Paste ONLY the link (ie NO explanation text)"""^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplinks> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              """Enter a link to further information.
+NOTE: Please strip all formatting before pasting, e.g. by pasting the value into a plain text editor (Textedit, gedit, Textpad, Notepad) before pasting into the textbox below. Paste ONLY the link (ie NO explanation text)"""^^xsd:string .
+
+dco:forProjectUpdate
+      obo:IAO_0000112 "Q1 FY2015 Project Update Modified by Prof. Fox on 2015-02-12 to add instruments"^^xsd:string ;
+      vitro:descriptionAnnot
+              "ProjectUpdate modified ProjectUpdateModified modifiedBy Person; modifiedOn date; label string"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "0"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "Project Update Modified for Project Update"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dco:projectUpdates
+      vitro:displayRankAnnot
+              "2"^^xsd:int ;
+      vitro:exampleAnnot "\"[2012-06-01] Preliminary test experiments with HTP-MFIC cell performed.\""^^xsd:string ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vitro.mannlib.cornell.edu/ns/default#n203> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              """Please provide short, dated comments on project progress.
+
+Example: \"[2012-06-01] Preliminary test experiments with HTP-MFIC cell performed.\""""^^xsd:string .
+
+dco:File
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .

@@ -5,4 +5,4 @@ before_install:
   - wget http://archive.apache.org/dist/jena/binaries/apache-jena-3.0.0.tar.gz -O /tmp/apache-jena.tar.gz
   - tar -xvf /tmp/apache-jena.tar.gz
   - export PATH=$PATH:$PWD/apache-jena-3.0.0/bin
-script: riot --validate dco.ttl
+script: riot --validate dco.ttl && riot --validate dco-vivo.ttl
