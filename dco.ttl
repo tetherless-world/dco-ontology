@@ -1,5 +1,4 @@
 @prefix dcat:    <http://www.w3.org/ns/dcat#> .
-@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix foaf:    <http://xmlns.com/foaf/0.1/> .
