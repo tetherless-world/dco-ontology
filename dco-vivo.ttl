@@ -1003,7 +1003,7 @@ dco:receivedGrant
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-dco:researchVessel
+dco:ResearchVessel
       obo:IAO_0000115 "A ship designed and equipped to carry out research at sea. "^^xsd:string ;
       vitro:descriptionAnnot
               "A ship designed and equipped to carry out research at sea. "^^xsd:string ;
