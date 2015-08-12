@@ -347,7 +347,7 @@ dco:hasVessel
       a       owl:ObjectProperty ;
       rdfs:domain dco:FieldStudy ;
       rdfs:label "Research Vessel"@en-US ;
-      rdfs:range dco:researchVessel ;
+      rdfs:range dco:ResearchVessel ;
       owl:inverseOf dco:isVesselFor .
 
 <http://info.deepcarbon.net/schema>
@@ -634,7 +634,7 @@ dco:receivedGrant
       rdfs:range vivo:Grant ;
       owl:inverseOf dco:grantRecipient .
 
-dco:researchVessel
+dco:ResearchVessel
       a       owl:Class ;
       rdfs:label "Research Vessel"@en-US ;
       rdfs:subClassOf
@@ -683,7 +683,7 @@ dco:fileFor
 
 dco:isVesselFor
       a       owl:ObjectProperty ;
-      rdfs:domain dco:researchVessel ;
+      rdfs:domain dco:ResearchVessel ;
       rdfs:label "Is Vessel For"@en-US ;
       rdfs:range dco:FieldStudy ;
       owl:inverseOf dco:hasVessel .
