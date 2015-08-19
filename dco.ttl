@@ -522,17 +522,17 @@ dco:hasVessel
       a       owl:ObjectProperty ;
       rdfs:domain dco:FieldStudy ;
       rdfs:label "Research Vessel"@en-US ;
-      rdfs:range dco:researchVessel ;
+      rdfs:range dco:ResearchVessel ;
       owl:inverseOf dco:isVesselFor .
 
 dco:isVesselFor
       a       owl:ObjectProperty ;
-      rdfs:domain dco:researchVessel ;
+      rdfs:domain dco:ResearchVessel ;
       rdfs:label "Is Vessel For"@en-US ;
       rdfs:range dco:FieldStudy ;
       owl:inverseOf dco:hasVessel .
 
-dco:researchVessel
+dco:ResearchVessel
       a       owl:Class ;
       rdfs:label "Research Vessel"@en-US ;
       rdfs:subClassOf
