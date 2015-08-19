@@ -230,7 +230,7 @@ dco:inLanguage
       rdfs:subPropertyOf owl:topDataProperty , dco:inLanguage .
 
 dco:dcoId
-      a       owl:FunctionalProperty , owl:AnnotationProperty , owl:DatatypeProperty ;
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain dco:Object ;
       rdfs:label "DCO ID"@en-US ;
       rdfs:range xsd:anyURI ;
@@ -377,11 +377,11 @@ dco:Technician
       owl:equivalentClass dco:Technician .
 
 dco:hasLatitude
-      a       owl:FunctionalProperty , owl:AnnotationProperty , owl:DatatypeProperty ;
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "latitude (decimal)"@en-US .
 
 dco:inOrganization
-      a       owl:AnnotationProperty , owl:ObjectProperty ;
+      a       owl:ObjectProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "organization"@en-US ;
       rdfs:range foaf:Organization ;
@@ -574,12 +574,6 @@ dco:sourceDataType
       rdfs:range dco:DataType ;
       rdfs:subPropertyOf prov:wasDerivedFrom .
 
-dco:Hearing
-      a       owl:Class ;
-      rdfs:label "Hearing"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:Report ;
-      owl:equivalentClass dco:Hearing .
-
 dco:temperature
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain dco:PhysicalLocation ;
@@ -620,7 +614,7 @@ dco:distributionFor
       owl:inverseOf dco:hasDistribution .
 
 dco:hasPeople
-      a       owl:AnnotationProperty , owl:ObjectProperty ;
+      a       owl:ObjectProperty ;
       rdfs:domain foaf:Organization ;
       rdfs:label "has people"@en-US ;
       rdfs:range foaf:Person ;
@@ -829,12 +823,6 @@ dco:instrumentCreatedBy
       rdfs:range vivo:Project ;
       owl:inverseOf dco:createdInstrument .
 
-dco:LegalRuling
-      a       owl:Class ;
-      rdfs:label "Legal Ruling"@en-US ;
-      rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:LegalDocument ;
-      owl:equivalentClass dco:LegalRuling .
-
 dco:vesselIMO
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "Vessel IMO"@en-US ;
@@ -908,12 +896,6 @@ dco:networkId
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "network ID"@en-US .
-
-dco:authorName
-      a       owl:DatatypeProperty ;
-      rdfs:domain vivo:InformationResource ;
-      rdfs:label "other authors"@en-US ;
-      rdfs:subPropertyOf owl:topDataProperty , dco:authorName .
 
 dco:publishedInBook
       a       owl:ObjectProperty ;
