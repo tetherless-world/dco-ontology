@@ -638,13 +638,6 @@ dco:IGSN
       rdfs:label "IGSN"@en-US ;
       rdfs:range xsd:anyURI .
 
-##### Deprecated
-dco:projectUpdates
-      a       owl:DatatypeProperty ;
-      rdfs:domain vivo:Project ;
-      rdfs:label "project updates"@en-US ;
-      rdfs:range xsd:string .
-
 ##### DataTypes
 dco:DataType
       a       dco:Object , prov:Entity , owl:Class ;
