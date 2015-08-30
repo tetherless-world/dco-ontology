@@ -899,15 +899,6 @@ dco:endsOn
       vitro:publicDescriptionAnnot
               "Fiscal Year ends on YYYY-MM-DD"^^xsd:string .
 
-dco:Hearing
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
-
 dco:temperature
       vitro:descriptionAnnot
               "Temperature at which activity is conducted"^^xsd:string ;
@@ -1311,15 +1302,6 @@ dco:instrumentCreatedBy
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-dco:LegalRuling
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGrouppublications> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
-
 dco:vesselIMO
       vitro:descriptionAnnot
               "International Maritime Organization (IMO) numbers"^^xsd:string ;
@@ -1471,22 +1453,6 @@ dco:networkId
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> .
 
-dco:authorName
-      vitro:descriptionAnnot
-              "Use this field to enter a single non-DCO author. ONE AUTHOR PER ENTRY"^^xsd:string ;
-      vitro:displayRankAnnot
-              "1"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> ;
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#dbAdmin> ;
-      vitro:publicDescriptionAnnot
-              "Use this field to enter a single non-DCO author. ONE AUTHOR PER ENTRY"^^xsd:string .
-
 dco:publishedInBook
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
@@ -1590,23 +1556,6 @@ dco:forProjectUpdate
               "Project Update Modified for Project Update"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
-
-dco:projectUpdates
-      vitro:displayRankAnnot
-              "2"^^xsd:int ;
-      vitro:exampleAnnot "\"[2012-06-01] Preliminary test experiments with HTP-MFIC cell performed.\""^^xsd:string ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inPropertyGroupAnnot
-              <http://vitro.mannlib.cornell.edu/ns/default#n203> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:publicDescriptionAnnot
-              """Please provide short, dated comments on project progress.
-
-Example: \"[2012-06-01] Preliminary test experiments with HTP-MFIC cell performed.\""""^^xsd:string .
 
 dco:File
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
