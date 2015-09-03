@@ -35,74 +35,110 @@ dco:Object
       a       owl:Class ;
       rdfs:label "Object"@en-US ;
       rdfs:subClassOf owl:Thing ;
-      owl:equivalentClass dco:Object .
+      owl:equivalentClass dco:Object ;
+      rdfs:comment  """
+      Top level object for classes in the DCO Ontology. Any dco:Object will have a DCO Id.
+      """^^rdf:XMLLiteral .
 
 dco:DCOID
       a       owl:Class ;
-      rdfs:label "DCO ID"@en-US .
+      rdfs:label "DCO ID"@en-US ;
+      rdfs:comment  """
+      Resolvable handle from handle.net for all DCO objects.
+      """^^rdf:XMLLiteral .
 
 dco:hasDcoId
       a       owl:FunctionalProperty , owl:InverseFunctionalProperty , owl:ObjectProperty ;
       rdfs:domain dco:Object ;
       rdfs:label "DCO ID"@en-US ;
       rdfs:range dco:DCOID ;
-      owl:inverseOf dco:dcoIdFor .
+      owl:inverseOf dco:dcoIdFor ;
+      rdfs:comment  """
+      Every dco:Object has a DCOID. From the object this property points to that DCO Id.
+      """^^rdf:XMLLiteral .
 
 dco:dcoIdFor
       a       owl:ObjectProperty ;
       rdfs:domain dco:DCOID ;
       rdfs:label "DCO ID for"@en-US ;
       rdfs:range dco:Object ;
-      owl:inverseOf dco:hasDcoId .
+      owl:inverseOf dco:hasDcoId ;
+      rdfs:comment  """
+      Every dco:Object has a DCOID. From the DCOID this property points back to the dco:Object.
+      """^^rdf:XMLLiteral .
 
 dco:dcoId
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain dco:Object ;
       rdfs:label "DCO ID"@en-US ;
       rdfs:range xsd:anyURI ;
-      rdfs:subPropertyOf owl:topDataProperty , dco:dcoId .
+      rdfs:subPropertyOf owl:topDataProperty , dco:dcoId ;
+      rdfs:comment  """
+      Original representation of a DCO Id was a simple URI.
+      """^^rdf:XMLLiteral .
 
 ##### foaf:Person subclasses
 dco:PhDStudent
       a       owl:Class ;
       rdfs:label "Ph.D. Student"@en-US ;
-      rdfs:subClassOf vivo:GraduateStudent .
+      rdfs:subClassOf vivo:GraduateStudent ;
+      rdfs:comment  """
+      A student who is pursuing their doctorate degree in a specific field of study for a specific topic.
+      """^^rdf:XMLLiteral .
 
 dco:Engineer
       a       owl:Class ;
       rdfs:label "Engineer"@en-US ;
       rdfs:subClassOf foaf:Person , foaf:Agent , owl:Thing , dco:Object ;
-      owl:equivalentClass dco:Engineer .
+      owl:equivalentClass dco:Engineer ;
+      rdfs:comment  """
+      A role that a person has in any of the many engineering disciplines who's goal is to design and build.
+      """^^rdf:XMLLiteral .
 
 dco:Technician
       a       owl:Class ;
       rdfs:label "Technician"@en-US ;
       rdfs:subClassOf foaf:Person , foaf:Agent , owl:Thing , dco:Object ;
-      owl:equivalentClass dco:Technician .
+      owl:equivalentClass dco:Technician ;
+      rdfs:comment  """
+      A role that a person has in maintaining technical equipment or doing practical work in a lab
+      """^^rdf:XMLLiteral .
 
 dco:Scientist
       a       owl:Class ;
       rdfs:label "Scientist"@en-US ;
       rdfs:subClassOf foaf:Person , owl:Thing , foaf:Agent , dco:Object ;
-      owl:equivalentClass dco:Scientist .
+      owl:equivalentClass dco:Scientist ;
+      rdfs:comment  """
+      A role that a person has who is researching or has expert knowledge of one or more of the natural or physical sciences.
+      """^^rdf:XMLLiteral .
 
 dco:Professor
       a       owl:Class ;
       rdfs:label "Professor"@en-US ;
       rdfs:subClassOf foaf:Person , vivo:FacultyMember , owl:Thing , foaf:Agent , dco:Object ;
-      owl:equivalentClass dco:Professor .
+      owl:equivalentClass dco:Professor ;
+      rdfs:comment  """
+      A role that a person has as a teacher at the highest rank in a college or university.
+      """^^rdf:XMLLiteral .
 
 dco:Staff
       a       owl:Class ;
       rdfs:label "Staff"@en-US ;
       rdfs:subClassOf foaf:Person , foaf:Agent , owl:Thing , dco:Object ;
-      owl:equivalentClass dco:Staff .
+      owl:equivalentClass dco:Staff ;
+      rdfs:comment  """
+      A role that a person has who is assisting members of a group in carrying out assigned tasks.
+      """^^rdf:XMLLiteral .
 
 dco:skype
       a       owl:DatatypeProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "skype"@en-US ;
-      rdfs:subPropertyOf owl:topDataProperty , dco:skype .
+      rdfs:subPropertyOf owl:topDataProperty , dco:skype ;
+      rdfs:comment  """
+      A person's identifier used for the Skype application.
+      """^^rdf:XMLLiteral .
 
 dco:inOrganization
       a       owl:ObjectProperty ;
@@ -110,51 +146,75 @@ dco:inOrganization
       rdfs:label "organization"@en-US ;
       rdfs:range foaf:Organization ;
       rdfs:subPropertyOf dco:inOrganization , owl:topObjectProperty ;
-      owl:inverseOf dco:hasPeople .
+      owl:inverseOf dco:hasPeople ;
+      rdfs:comment  """
+      Property which links a person with the organization that they play a role in.
+      """^^rdf:XMLLiteral .
 
 dco:shortName
       a       owl:DatatypeProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "short name"@en-US ;
-      rdfs:subPropertyOf owl:topDataProperty , dco:shortName .
+      rdfs:subPropertyOf owl:topDataProperty , dco:shortName ;
+      rdfs:comment  """
+      The name that people commonly refer to another person has. For example, a short name of Bill for their full name William.
+      """^^rdf:XMLLiteral .
 
 dco:speaksLanguage
       a       owl:DatatypeProperty ;
       rdfs:domain foaf:Person ;
-      rdfs:label "Language(s) Spoken Fluently"@en-US .
+      rdfs:label "Language(s) Spoken Fluently"@en-US ;
+      rdfs:comment  """
+      A language that a person speaks fluently.
+      """^^rdf:XMLLiteral .
 
 dco:receivedGrant
       a       owl:ObjectProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "received grant"@en-US ;
       rdfs:range vivo:Grant ;
-      owl:inverseOf dco:grantRecipient .
+      owl:inverseOf dco:grantRecipient ;
+      rdfs:comment  """
+      Relating a person with a grant that they have received for funded work.
+      """^^rdf:XMLLiteral .
 
 dco:grantRecipient
       a       owl:ObjectProperty ;
       rdfs:domain vivo:Grant ;
       rdfs:label "recipient"@en-US ;
       rdfs:range foaf:Person ;
-      owl:inverseOf dco:receivedGrant .
+      owl:inverseOf dco:receivedGrant ;
+      rdfs:comment  """
+      Relates a grant with the person who received the grant to conduct funded work.
+      """^^rdf:XMLLiteral .
 
 dco:homeCountry
       a       owl:ObjectProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "Nationality"@en-US ;
       rdfs:range vivo:Country ;
-      rdfs:subPropertyOf owl:topObjectProperty , dco:homeCountry .
+      rdfs:subPropertyOf owl:topObjectProperty , dco:homeCountry ;
+      rdfs:comment  """
+      The country that a person currently resides in.
+      """^^rdf:XMLLiteral .
 
 dco:networkId
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain foaf:Person ;
-      rdfs:label "network ID"@en-US .
+      rdfs:label "network ID"@en-US ;
+      rdfs:comment  """
+      The property that relates a person to their DCO login.
+      """^^rdf:XMLLiteral .
 
 ##### bibo:Document
 dco:Artwork
       a       owl:Class ;
       rdfs:label "Artwork"@en-US ;
       rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:Image , vivo:InformationResource ;
-      owl:equivalentClass dco:Artwork .
+      owl:equivalentClass dco:Artwork ;
+      rdfs:comment  """
+      Illustrations, photographs, or other nontextual material prepared for inclusion in a publication.
+      """^^rdf:XMLLiteral .
 
 dco:Poster
       a       owl:Class ;
@@ -165,7 +225,10 @@ dco:Poster
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty dco:isDCOPublication
               ] ;
-      owl:equivalentClass dco:Poster .
+      owl:equivalentClass dco:Poster ;
+      rdfs:comment  """
+      A large printed depiction representing research or work that is being conducted.
+      """^^rdf:XMLLiteral .
 
 dco:GovernmentReport
       a       owl:Class ;
@@ -176,7 +239,10 @@ dco:GovernmentReport
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty dco:isDCOPublication
               ] ;
-      owl:equivalentClass dco:GovernmentReport .
+      owl:equivalentClass dco:GovernmentReport ;
+      rdfs:comment  """
+      An official document that is prepared to provide an account of a particular matter for a government entity.
+      """^^rdf:XMLLiteral .
 
 dco:WebArticle
       a       owl:Class ;
@@ -187,7 +253,10 @@ dco:WebArticle
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty dco:isDCOPublication
               ] ;
-      owl:equivalentClass dco:WebArticle .
+      owl:equivalentClass dco:WebArticle ;
+      rdfs:comment  """
+      A piece of writing included with others on a website.
+      """^^rdf:XMLLiteral .
 
 dco:Broadcast
       a       owl:Class ;
@@ -198,13 +267,19 @@ dco:Broadcast
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty dco:isDCOPublication
               ] ;
-      owl:equivalentClass dco:Broadcast .
+      owl:equivalentClass dco:Broadcast ;
+      rdfs:comment  """
+      A transmission of content over a medium such as radio, television or streamed over the Internet.
+      """^^rdf:XMLLiteral .
 
 dco:Chart
       a       owl:Class ;
       rdfs:label "Chart"@en-US ;
       rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , bibo:Image , vivo:InformationResource ;
-      owl:equivalentClass dco:Chart .
+      owl:equivalentClass dco:Chart ;
+      rdfs:comment  """
+      A graphical representation of data.
+      """^^rdf:XMLLiteral .
 
 dco:MagazineArticle
       a       owl:Class ;
@@ -215,12 +290,18 @@ dco:MagazineArticle
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty dco:isDCOPublication
               ] ;
-      owl:equivalentClass dco:MagazineArticle .
+      owl:equivalentClass dco:MagazineArticle ;
+      rdfs:comment  """
+      A piece of writing included with others in a magazine.
+      """^^rdf:XMLLiteral .
 
 dco:Proceedings
       a       owl:Class ;
       rdfs:label "Proceedings"@en-US ;
-      rdfs:subClassOf bibo:Collection .
+      rdfs:subClassOf bibo:Collection ;
+      rdfs:comment  """
+      A collection of academic papers published in the context of an academic conference
+      """^^rdf:XMLLiteral .
 
 dco:JournalArticle
       a       owl:Class ;
@@ -231,127 +312,191 @@ dco:JournalArticle
                 owl:allValuesFrom xsd:boolean ;
                 owl:onProperty dco:isDCOPublication
               ] ;
-      owl:equivalentClass dco:JournalArticle .
+      owl:equivalentClass dco:JournalArticle ;
+      rdfs:comment  """
+      A publication written by someone with academic qualifications or expert knowledge which is evidence-based and published in a
+      journal.
+      """^^rdf:XMLLiteral .
 
 dco:NewspaperArticle
       a       owl:Class ;
       rdfs:label "Newspaper Article"@en-US ;
       rdfs:subClassOf bibo:Document , owl:Thing , dco:Object , vivo:InformationResource , bibo:Article ;
-      owl:equivalentClass dco:NewspaperArticle .
+      owl:equivalentClass dco:NewspaperArticle ;
+      rdfs:comment  """
+      A piece of writing included with others in a newspaper.
+      """^^rdf:XMLLiteral .
 
 dco:BookSeries
       a       owl:Class ;
       rdfs:label "Book Series"@en-US ;
       rdfs:subClassOf bibo:Collection , owl:Thing , dco:Object , bibo:Series , vivo:InformationResource ;
-      owl:equivalentClass dco:BookSeries .
+      owl:equivalentClass dco:BookSeries ;
+      rdfs:comment  """
+      A sequence of books having certain characteristics in common that are formally identified together as a group.
+      """^^rdf:XMLLiteral .
 
 dco:isDCOPublication
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "is DCO publication"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      A property which classifies a publication as being a contribution to the Deep Carbon Observatory Community.
+      """^^rdf:XMLLiteral .
 
 dco:yearOfPublication
       a       owl:DatatypeProperty ;
       rdfs:domain bibo:Document ;
       rdfs:label "year of publication"@en-US ;
       rdfs:range xsd:gYear ;
-      rdfs:subPropertyOf owl:topDataProperty , dco:yearOfPublication .
+      rdfs:subPropertyOf owl:topDataProperty , dco:yearOfPublication ;
+      rdfs:comment  """
+      The year in which a publication has been published.
+      """^^rdf:XMLLiteral .
 
 dco:containsBook
       a       owl:ObjectProperty ;
       rdfs:domain dco:BookSeries ;
       rdfs:label "books"@en-US ;
       rdfs:range bibo:Book ;
-      rdfs:subPropertyOf dco:containsBook , owl:topObjectProperty .
+      rdfs:subPropertyOf dco:containsBook , owl:topObjectProperty ;
+      rdfs:comment  """
+      One of many books that are included in a book series.
+      """^^rdf:XMLLiteral .
 
 dco:containsChapter
       a       owl:ObjectProperty ;
       rdfs:domain bibo:Book ;
       rdfs:label "chapters"@en-US ;
       rdfs:range bibo:Chapter ;
-      rdfs:subPropertyOf dco:containsChapter , owl:topObjectProperty .
+      rdfs:subPropertyOf dco:containsChapter , owl:topObjectProperty ;
+      rdfs:comment  """
+      One of one or more divisions of a book.
+      """^^rdf:XMLLiteral .
 
 dco:publishedInSeries
       a       owl:ObjectProperty ;
       rdfs:label "series title"@en-US ;
       rdfs:range dco:BookSeries ;
-      rdfs:subPropertyOf owl:topObjectProperty , dco:publishedInSeries .
+      rdfs:subPropertyOf owl:topObjectProperty , dco:publishedInSeries ;
+      rdfs:comment  """
+      A book or chapter of a book that is published in a series of books.
+      """^^rdf:XMLLiteral .
 
 dco:datePublished
       a       owl:ObjectProperty ;
       rdfs:domain vivo:InformationResource ;
       rdfs:label "date published"@en-US ;
       rdfs:range vivo:DateTimeValue ;
-      rdfs:subPropertyOf owl:topObjectProperty , dco:datePublished , vivo:dateTimeValue .
+      rdfs:subPropertyOf owl:topObjectProperty , dco:datePublished , vivo:dateTimeValue ;
+      rdfs:comment  """
+      The date that a publication was published. Can be represented as a full date or one or more components of a date.
+      """^^rdf:XMLLiteral .
 
 dco:publishedInBook
       a       owl:ObjectProperty ;
       rdfs:label "book title"@en-US ;
       rdfs:range bibo:Book ;
-      rdfs:subPropertyOf owl:topObjectProperty , dco:publishedInBook .
+      rdfs:subPropertyOf owl:topObjectProperty , dco:publishedInBook ;
+      rdfs:comment  """
+      A chapter, chart, figure, table of data, etc... that is included in a book.
+      """^^rdf:XMLLiteral .
 
 ##### Project Updates
+dco:ProjectUpdate
+      a       owl:Class ;
+      rdfs:label "Project Update"@en-US ;
+      rdfs:subClassOf dco:Object ;
+      rdfs:comment  """
+      Information provided to show what progress has been made in a project during a reporting year.
+      """^^rdf:XMLLiteral .
+
 dco:hasProjectUpdate
       a       owl:ObjectProperty ;
       rdfs:domain vivo:Project ;
       rdfs:label "Project Update"@en-US ;
       rdfs:range dco:ProjectUpdate ;
-      owl:inverseOf dco:forProject .
-
-dco:ProjectUpdate
-      a       owl:Class ;
-      rdfs:label "Project Update"@en-US ;
-      rdfs:subClassOf dco:Object .
+      owl:inverseOf dco:forProject ;
+      rdfs:comment  """
+      Property relating a project to information showing progress on the project during a reporting year. There can be multiple
+      project updates during a reporting year.
+      """^^rdf:XMLLiteral .
 
 dco:forProject
       a       owl:ObjectProperty ;
       rdfs:domain dco:ProjectUpdate ;
       rdfs:label "For Project"@en-US ;
       rdfs:range vivo:Project ;
-      owl:inverseOf dco:hasProjectUpdate .
+      owl:inverseOf dco:hasProjectUpdate ;
+      rdfs:comment  """
+      Property relating a information showing progress on a project during a reporting year to the project being updated.
+      """^^rdf:XMLLiteral .
 
 dco:submittedOn
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain dco:ProjectUpdate ;
       rdfs:label "Date Submitted"@en-US ;
-      rdfs:range xsd:date .
+      rdfs:range xsd:date ;
+      rdfs:comment  """
+      The date on which a project update is submitted during the reporting year. Project updates are sorted on this property in
+      reporting year reports.
+      """^^rdf:XMLLiteral .
 
 dco:updateText
       a       owl:DatatypeProperty ;
       rdfs:domain dco:ProjectUpdate ;
       rdfs:label "Update Text"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      The text of a project update describing the progress made on a project during a reporting year.
+      """^^rdf:XMLLiteral .
 
 dco:forReportingYear
       a       owl:FunctionalProperty , owl:ObjectProperty ;
       rdfs:domain dco:ProjectUpdate ;
       rdfs:label "For Reporting Year"@en-US ;
       rdfs:range dco:ReportingYear ;
-      rdfs:subPropertyOf owl:topObjectProperty .
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:comment  """
+      Associating a reporting year to the project update.
+      """^^rdf:XMLLiteral .
 
 dco:ReportingYear
       a       owl:Class ;
       rdfs:label "Reporting Year"@en-US ;
-      rdfs:subClassOf dco:Object .
+      rdfs:subClassOf dco:Object ;
+      rdfs:comment  """
+      A fixed span of time defined by a funding agency after which reports are due showing progress made on projects during the
+      reporting year.
+      """^^rdf:XMLLiteral .
 
 dco:startsOn
       a       owl:DatatypeProperty ;
       rdfs:domain dco:ReportingYear ;
       rdfs:label "Starts On"@en-US ;
-      rdfs:range xsd:date .
+      rdfs:range xsd:date ;
+      rdfs:comment  """
+      The reporting year starts on this specific date.
+      """^^rdf:XMLLiteral .
 
 dco:endsOn
       a       owl:DatatypeProperty ;
       rdfs:domain dco:ReportingYear ;
       rdfs:label "Ends On"@en-US ;
-      rdfs:range xsd:date .
+      rdfs:range xsd:date ;
+      rdfs:comment  """
+      The reporting year ends on this specific date.
+      """^^rdf:XMLLiteral .
 
 dco:hasReportingYear
       a       owl:ObjectProperty ;
       rdfs:domain foaf:Organization ;
       rdfs:label "Reporting Year"@en-US ;
       rdfs:range dco:ReportingYear ;
-      owl:inverseOf dco:forOrganization .
+      owl:inverseOf dco:forOrganization ;
+      rdfs:comment  """
+      A reporting year that is defined by an organization, usually a funding agency.
+      """^^rdf:XMLLiteral .
 
 dco:forOrganization
       a       owl:ObjectProperty ;
@@ -359,25 +504,37 @@ dco:forOrganization
       rdfs:label "For Organization"@en-US ;
       rdfs:range foaf:Organization ;
       rdfs:subPropertyOf owl:topObjectProperty ;
-      owl:inverseOf dco:hasReportingYear .
+      owl:inverseOf dco:hasReportingYear ;
+      rdfs:comment  """
+      The organization, usually a funding agency, that a reporting year is related to.
+      """^^rdf:XMLLiteral .
 
 dco:ProjectUpdateModificationNote
       a       owl:Class ;
       rdfs:label "Project Update Modification Note"@en-US ;
-      rdfs:subClassOf dco:Object .
+      rdfs:subClassOf dco:Object ;
+      rdfs:comment  """
+      Information showing who has provided information and when the information was provided for a project update.
+      """^^rdf:XMLLiteral .
 
 dco:modifiedOn
       a       owl:DatatypeProperty ;
       rdfs:domain dco:ProjectUpdateModificationNote ;
       rdfs:label "Modified On"@en-US ;
-      rdfs:range xsd:date .
+      rdfs:range xsd:date ;
+      rdfs:comment  """
+      The date on which an update was made to a project update.
+      """^^rdf:XMLLiteral .
 
 dco:modifiedBy
       a       owl:ObjectProperty ;
       rdfs:domain dco:ProjectUpdateModificationNote ;
       rdfs:label "Modified By"@en-US ;
       rdfs:range foaf:Person ;
-      rdfs:subPropertyOf owl:topObjectProperty .
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:comment  """
+      The person who has made an update to a project update.
+      """^^rdf:XMLLiteral .
 
 dco:modificationNote
       a       owl:ObjectProperty ;
@@ -385,49 +542,71 @@ dco:modificationNote
       rdfs:label "List of Modifications"@en-US ;
       rdfs:range dco:ProjectUpdateModificationNote ;
       rdfs:subPropertyOf owl:topObjectProperty ;
-      owl:inverseOf dco:forProjectUpdate .
+      owl:inverseOf dco:forProjectUpdate ;
+      rdfs:comment  """
+      A description of what modifications were made to a project update, such as the attachment of a publication or clarifying
+      information in the update.
+      """^^rdf:XMLLiteral .
 
 dco:forProjectUpdate
       a       owl:ObjectProperty ;
       rdfs:domain dco:ProjectUpdateModificationNote ;
       rdfs:label "For Project Update"@en-US ;
       rdfs:range dco:ProjectUpdate ;
-      owl:inverseOf dco:modificationNote .
+      owl:inverseOf dco:modificationNote ;
+      rdfs:comment  """
+      The project update to which a modification information is added.
+      """^^rdf:XMLLiteral .
 
 dco:referencedByUpdate
       a       owl:ObjectProperty ;
       rdfs:domain obo:ERO_0000004 ;
       rdfs:label "Referenced By Update"@en-US ;
       rdfs:range dco:ProjectUpdate ;
-      owl:inverseOf dco:refersToInstrument .
+      owl:inverseOf dco:refersToInstrument ;
+      rdfs:comment  """
+      Something that is referenced from within project update information during a specific reporting year.
+      """^^rdf:XMLLiteral .
 
 dco:associatedPublication
       a       owl:ObjectProperty ;
       rdfs:domain dco:ProjectUpdate ;
       rdfs:label "Associated Publications"@en-US ;
       rdfs:range bibo:Document ;
-      rdfs:subPropertyOf owl:topObjectProperty .
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:comment  """
+      A publication referenced by a project update during a specific reporting year.
+      """^^rdf:XMLLiteral .
 
 dco:refersToInstrument
       a       owl:ObjectProperty ;
       rdfs:domain dco:ProjectUpdate ;
       rdfs:label "Refers to Instrument"@en-US ;
       rdfs:range obo:ERO_0000004 ;
-      owl:inverseOf dco:referencedByUpdate .
+      owl:inverseOf dco:referencedByUpdate ;
+      rdfs:comment  """
+      An instrument, such as a satellite, that is used by a project and referenced in a project update.
+      """^^rdf:XMLLiteral .
 
 ##### Field Studies
 dco:FieldStudy
       a       owl:Class ;
       rdfs:label "Field Study"@en-US ;
       rdfs:subClassOf owl:Thing , dco:Activity , vivo:Project , dco:Object ;
-      owl:equivalentClass dco:FieldStudy .
+      owl:equivalentClass dco:FieldStudy ;
+      rdfs:comment  """
+      A type of project where researchers visit a particular site in order to collect measurements, samples and other data.
+      """^^rdf:XMLLiteral .
 
 dco:hasPhysicalLocation
       a       owl:ObjectProperty ;
       rdfs:domain dco:FieldStudy ;
       rdfs:label "Field sites"@en-US ;
       rdfs:range dco:PhysicalLocation ;
-      owl:inverseOf dco:isPhysicalLocationOf .
+      owl:inverseOf dco:isPhysicalLocationOf ;
+      rdfs:comment  """
+      Relating a field study with a specific location where measurements, samples and other data are collected.
+      """^^rdf:XMLLiteral .
 
 dco:PhysicalLocation
       a       owl:Class ;
@@ -446,74 +625,87 @@ dco:PhysicalLocation
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty dco:hasLatitude
-              ] .
-
-dco:pressure
-      a       owl:DatatypeProperty ;
-      rdfs:domain dco:PhysicalLocation ;
-      rdfs:label "pressure"@en-US ;
-      rdfs:range xsd:string .
-
-dco:depth
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain dco:PhysicalLocation ;
-      rdfs:label "depth (meters)"@en-US ;
-      rdfs:range xsd:string .
-
-dco:temperature
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain dco:PhysicalLocation ;
-      rdfs:label "temperature"@en-US ;
-      rdfs:range xsd:string .
-
-dco:altitude
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain dco:PhysicalLocation ;
-      rdfs:label "altitude (meters)"@en-US ;
-      rdfs:range xsd:string .
+              ] ;
+      rdfs:comment  """
+      The location where measurements, samples and other data are collected. Must include a description, longitude and latitude.
+      """^^rdf:XMLLiteral .
 
 dco:isPhysicalLocationOf
       a       owl:ObjectProperty ;
       rdfs:domain dco:PhysicalLocation ;
       rdfs:label "is field site of"@en-US ;
       rdfs:range dco:FieldStudy ;
-      owl:inverseOf dco:hasPhysicalLocation .
+      owl:inverseOf dco:hasPhysicalLocation ;
+      rdfs:comment  """
+      Relating a representation of a physical location where measurements are taken to a field study.
+      """^^rdf:XMLLiteral .
+
+dco:pressure
+      a       owl:DatatypeProperty ;
+      rdfs:domain dco:PhysicalLocation ;
+      rdfs:label "pressure"@en-US ;
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      Measurement of force per unit area that a fluid exerts on its surroundings.
+      """^^rdf:XMLLiteral .
+
+dco:depth
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:domain dco:PhysicalLocation ;
+      rdfs:label "depth (meters)"@en-US ;
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      The distance from the top or surface of something to the bottom at which measurements are taken as part of a field study.
+      """^^rdf:XMLLiteral .
+
+dco:temperature
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:domain dco:PhysicalLocation ;
+      rdfs:label "temperature"@en-US ;
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      The degree or intensity of heat present at a location where measurements are taken as part of a field study.
+      """^^rdf:XMLLiteral .
+
+dco:altitude
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:domain dco:PhysicalLocation ;
+      rdfs:label "altitude (meters)"@en-US ;
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      The height or point in relation to sea level or ground level where measurements are taken for a given field study.
+      """^^rdf:XMLLiteral .
 
 dco:leaderForFieldwork
       a       owl:ObjectProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "leader for fieldwork"@en-US ;
       rdfs:range dco:FieldStudy ;
-      owl:inverseOf dco:fieldworkLeader .
+      owl:inverseOf dco:fieldworkLeader ;
+      rdfs:comment  """
+      Relating a field study to a person who is responsible for working being conducted at the site.
+      """^^rdf:XMLLiteral .
 
 dco:fieldworkLeader
       a       owl:ObjectProperty ;
       rdfs:domain dco:FieldStudy ;
       rdfs:label "leader"@en-US ;
       rdfs:range foaf:Person ;
-      owl:inverseOf dco:leaderForFieldwork .
+      owl:inverseOf dco:leaderForFieldwork ;
+      rdfs:comment  """
+      Relating a person who is responsible for work being conducted to a field study.
+      """^^rdf:XMLLiteral .
 
 dco:openToJournalists
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain dco:FieldStudy ;
       rdfs:label "open to journalists"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      Specifies whether a location where field study is being conducted is accessible to members of the media.
+      """^^rdf:XMLLiteral .
 
 ##### Vessels
-dco:hasVessel
-      a       owl:ObjectProperty ;
-      rdfs:domain dco:FieldStudy ;
-      rdfs:label "Research Vessel"@en-US ;
-      rdfs:range dco:ResearchVessel ;
-      owl:inverseOf dco:isVesselFor .
-
-dco:isVesselFor
-      a       owl:ObjectProperty ;
-      rdfs:domain dco:ResearchVessel ;
-      rdfs:label "Is Vessel For"@en-US ;
-      rdfs:range dco:FieldStudy ;
-      owl:inverseOf dco:hasVessel .
-
 dco:ResearchVessel
       a       owl:Class ;
       rdfs:label "Research Vessel"@en-US ;
@@ -551,32 +743,70 @@ dco:ResearchVessel
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty dco:vesselMMSI
-              ] .
+              ] ;
+      rdfs:comment  """
+      A ship or boat designed and/or equipped to carry out scientific studies at sea.
+      """^^rdf:XMLLiteral .
+
+dco:hasVessel
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:FieldStudy ;
+      rdfs:label "Research Vessel"@en-US ;
+      rdfs:range dco:ResearchVessel ;
+      owl:inverseOf dco:isVesselFor ;
+      rdfs:comment  """
+      Linking a ResearchVessel to a specific field study.
+      """^^rdf:XMLLiteral .
+
+dco:isVesselFor
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:ResearchVessel ;
+      rdfs:label "Is Vessel For"@en-US ;
+      rdfs:range dco:FieldStudy ;
+      owl:inverseOf dco:hasVessel ;
+      rdfs:comment  """
+      Linking a field study to a specific research vessel.
+      """^^rdf:XMLLiteral .
 
 dco:vesselTrackingURL
       a       owl:DatatypeProperty ;
       rdfs:label "Vessel Information Link"@en-US ;
-      rdfs:range xsd:anyURI .
+      rdfs:range xsd:anyURI ;
+      rdfs:comment  """
+      A resource URL that describes the deployment of a ResearchVessel
+      """^^rdf:XMLLiteral .
 
 dco:vesselMMSI
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "Vessel MMSI"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      A research vessels Maritime Mobile Service Identity.
+      """^^rdf:XMLLiteral .
 
 dco:vesselIMO
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "Vessel IMO"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      A research vessel ship number consisting of the three letters IMO followed by a unique seven-digit number
+      """^^rdf:XMLLiteral .
 
 dco:vesselCallSign
       a       owl:DatatypeProperty ;
       rdfs:label "Vessel Call Sign"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      A research vessel transmission statuon unique designation
+      """^^rdf:XMLLiteral .
 
 dco:vesselName
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "Vessel Name"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      A name given to a research vessel. May not be unique.
+      """^^rdf:XMLLiteral .
 
 ##### Samples
 dco:GeoSample
@@ -607,41 +837,73 @@ dco:GeoSample
               [ a       owl:Restriction ;
                 owl:allValuesFrom rdfs:Literal ;
                 owl:onProperty dco:hasSampleAge
-              ] .
+              ] ;
+      rdfs:comment  """
+      A specimen or small quantity of a geophysical material.
+      """^^rdf:XMLLiteral .
 
 dco:hasGeoSample
       a       owl:ObjectProperty ;
       rdfs:domain dco:FieldStudy ;
       rdfs:label "Has samples"@en-US ;
       rdfs:range dco:GeoSample ;
-      owl:inverseOf dco:isSampleFor .
+      owl:inverseOf dco:isSampleFor ;
+      rdfs:comment  """
+      Relating a geo sample collected at a physical location to the
+      field study at that location.
+      """^^rdf:XMLLiteral .
 
 dco:isSampleFor
       a       owl:ObjectProperty ;
       rdfs:domain dco:GeoSample ;
       rdfs:label "Is sample for"@en-US ;
       rdfs:range dco:FieldStudy ;
-      owl:inverseOf dco:hasGeoSample .
+      owl:inverseOf dco:hasGeoSample ;
+      rdfs:comment  """
+      Specifies the field study that a geo sample is associated with.
+      """^^rdf:XMLLiteral .
 
 dco:hasMaterial
       a       owl:DatatypeProperty ;
-      rdfs:label "sample material"@en-US .
+      rdfs:label "sample material"@en-US ;
+      rdfs:comment  """
+      The substance that a  geo sample is made up of.
+      """^^rdf:XMLLiteral .
 
 dco:hasSampleAge
       a       owl:DatatypeProperty ;
       rdfs:domain dco:GeoSample ;
-      rdfs:label "sample age"@en-US .
+      rdfs:label "sample age"@en-US ;
+      rdfs:comment  """
+      The time that a sample was deposited in the earth.
+      """^^rdf:XMLLiteral .
 
 dco:IGSN
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain dco:GeoSample ;
       rdfs:label "IGSN"@en-US ;
-      rdfs:range xsd:anyURI .
+      rdfs:range xsd:anyURI ;
+      rdfs:comment  """
+      The International Geo Sample Number is a persistent identifier
+      assigned to a geo sample.
+      """^^rdf:XMLLiteral .
 
 ##### DataTypes
 dco:DataType
       a       dco:Object , prov:Entity , owl:Class ;
-      rdfs:comment "A data type is often treated as a purely syntactic label associated with a variable when it is declared, such as integer, float, boolean, character, and string, etc. Such definitions of 'data type' do not give any semantic meaning to the data types. In the context of this ontology, a data type can include more meanings beyond the syntax, such as who create the data type, the source standard that the data type derives from, the operations that can be done on datasets of that data type, and typical scientific domains, software programs and/or instruments that use the data type, etc. The intent is that any humans or machines that when they encounter that data type can quickly 'understand' or be in a situation to at least 'process' details within the dataset without even downloading that dataset." ;
+      rdfs:comment "A data type is often treated as a purely syntactic
+      label associated with a variable when it is declared, such as
+      integer, float, boolean, character, and string, etc. Such
+      definitions of 'data type' do not give any semantic meaning to the
+      data types. In the context of this ontology, a data type can
+      include more meanings beyond the syntax, such as who created the
+      data type, the source standard that the data type derives from,
+      the operations that can be done on datasets of that data type, and
+      typical scientific domains, software programs and/or instruments
+      that use the data type, etc. The intent is that any humans or
+      machines that when they encounter that data type can quickly
+      'understand' or be in a situation to at least 'process' details
+      within the dataset without even downloading that dataset." ;
       rdfs:label "Data Type"@en-US ;
       rdfs:subClassOf dco:Object , prov:Entity ;
       skos:definition "A data type is the representation of particular qualities or features that a group of datasets share." .
@@ -727,19 +989,31 @@ dco:Collaboration
                 owl:allValuesFrom dco:ResearchCommunity ;
                 owl:onProperty dco:associatedDCOCommunity
               ] ;
-      owl:equivalentClass dco:Collaboration .
+      owl:equivalentClass dco:Collaboration ;
+      rdfs:comment  """
+      Working with someone or a group of people to produce or create something
+      """^^rdf:XMLLiteral .
 
 dco:ResearchCommunity
       a       owl:Class ;
       rdfs:label "Research Community"@en-US ;
       rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
-      owl:equivalentClass dco:ResearchCommunity .
+      owl:equivalentClass dco:ResearchCommunity ;
+      rdfs:comment  """
+      A group of people who are working together in a specific science
+      domain.
+      """^^rdf:XMLLiteral .
 
 dco:PortalGroup
       a       owl:Class ;
       rdfs:label "Portal Group"@en-US ;
       rdfs:subClassOf foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
-      owl:equivalentClass dco:PortalGroup .
+      owl:equivalentClass dco:PortalGroup ;
+      rdfs:comment  """
+      A collaboration amongst 2 or more people working towards a common
+      goal. For example the Portal Development Group of the Deep Carbon
+      Observatory.
+      """^^rdf:XMLLiteral .
 
 dco:Activity
       a       owl:Class ;
@@ -755,30 +1029,50 @@ dco:Activity
                 owl:allValuesFrom dco:PortalGroup ;
                 owl:onProperty dco:associatedDCOPortalGroup
               ] ;
-      owl:equivalentClass dco:Activity .
+      owl:equivalentClass dco:Activity ;
+      rdfs:comment  """
+      Something that a person or group does or has done. For example,
+      FieldStudy or Project.
+      """^^rdf:XMLLiteral .
 
 dco:ResearchAdministration
       a       owl:Class ;
       rdfs:label "Research Administration"@en-US ;
       rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
       owl:equivalentClass dco:ResearchAdministration .
+      rdfs:comment  """
+      An group of people who administer the resources of a research
+      community.
+      """^^rdf:XMLLiteral .
 
 dco:ResearchAdvisoryCommittee
       a       owl:Class ;
       rdfs:label "Research Advisory Committee"@en-US ;
       rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , foaf:Agent , owl:Thing , dco:Object ;
-      owl:equivalentClass dco:ResearchAdvisoryCommittee .
+      owl:equivalentClass dco:ResearchAdvisoryCommittee ;
+      rdfs:comment  """
+      a collection of individuals who bring unique knowledge and skills
+      which augment the knowledge and skills of the research community
+      """^^rdf:XMLLiteral .
 
 dco:associatedDCOCommunity
       a       owl:ObjectProperty ;
       rdfs:label "associated DCO community"@en-US ;
-      rdfs:range dco:ResearchCommunity .
+      rdfs:range dco:ResearchCommunity ;
+      rdfs:comment  """
+      Relates a research community to an entity such as a publication or
+      dataset.
+      """^^rdf:XMLLiteral .
 
 dco:associatedDCOPortalGroup
       a       owl:ObjectProperty ;
       rdfs:label "associated DCO portal group"@en-US ;
       rdfs:range dco:PortalGroup ;
-      rdfs:subPropertyOf dco:associatedDCOPortalGroup , owl:topObjectProperty .
+      rdfs:subPropertyOf dco:associatedDCOPortalGroup , owl:topObjectProperty ;
+      rdfs:comment  """
+      Relates a portal group to an entity such as a publication or
+      dataset.
+      """^^rdf:XMLLiteral .
 
 dco:hasPeople
       a       owl:ObjectProperty ;
@@ -786,7 +1080,10 @@ dco:hasPeople
       rdfs:label "has people"@en-US ;
       rdfs:range foaf:Person ;
       rdfs:subPropertyOf owl:topObjectProperty , dco:hasPeople ;
-      owl:inverseOf dco:inOrganization .
+      owl:inverseOf dco:inOrganization ;
+      rdfs:comment  """
+      An individual who is a part of an organization.
+      """^^rdf:XMLLiteral .
 
 dco:relatedOrganization
       a       owl:ObjectProperty , owl:SymmetricProperty ;
@@ -794,7 +1091,10 @@ dco:relatedOrganization
       rdfs:label "related organization"@en-US ;
       rdfs:range foaf:Organization ;
       rdfs:subPropertyOf dco:relatedOrganization , owl:topObjectProperty ;
-      owl:inverseOf dco:relatedOrganization .
+      owl:inverseOf dco:relatedOrganization ;
+      rdfs:comment  """
+      Relates one organization to another organization.
+      """^^rdf:XMLLiteral .
 
 ##### Distributions, Files, Datasets
 dco:File
@@ -816,14 +1116,27 @@ dco:File
                 owl:allValuesFrom dco:PortalGroup ;
                 owl:onProperty dco:associatedDCOPortalGroup
               ] ;
-      owl:equivalentClass dco:File .
+      owl:equivalentClass dco:File ;
+      rdfs:comment  """
+      A self contained collection of data or information available in a
+      particular format and available to computer programs.
+      """^^rdf:XMLLiteral .
+
 dco:hasDistribution
       a       owl:ObjectProperty ;
       rdfs:domain vivo:InformationResource ;
       rdfs:label "distribution (attachments or links)"@en-US ;
       rdfs:range dcat:Distribution ;
       rdfs:subPropertyOf dco:hasDistribution , owl:topObjectProperty ;
-      owl:inverseOf dco:distributionFor .
+      owl:inverseOf dco:distributionFor ;
+      rdfs:comment  """
+      Links a collection of data or information to a particular
+      available form of that information. Each dataset might be
+      available in different forms, these forms might represent
+      different formats of the dataset or different endpoints.
+      Examples of distributions include a downloadable CSV file,
+      an API or an RSS feed.
+      """^^rdf:XMLLiteral .
 
 dco:hasFile
       a       owl:ObjectProperty ;
@@ -831,7 +1144,11 @@ dco:hasFile
       rdfs:label "files or links to files"@en-US ;
       rdfs:range dco:File ;
       rdfs:subPropertyOf owl:topObjectProperty , dco:hasFile ;
-      owl:inverseOf dco:fileFor .
+      owl:inverseOf dco:fileFor ;
+      rdfs:comment  """
+      Links a distribution of a datasets to a specific file that is a
+      part of that distribution.
+      """^^rdf:XMLLiteral .
 
 dco:isDatasetOf
       a       owl:ObjectProperty ;
@@ -839,6 +1156,10 @@ dco:isDatasetOf
       rdfs:label "Is Dataset Of"@en-US ;
       rdfs:range vivo:Project ;
       owl:inverseOf dco:relatedDataset .
+      rdfs:comment  """
+      Links a dataset back to the project from which the data was
+      collected.
+      """^^rdf:XMLLiteral .
 
 dco:distributionFor
       a       owl:ObjectProperty ;
@@ -846,7 +1167,11 @@ dco:distributionFor
       rdfs:label "Distribution (attachment or links) for"@en-US ;
       rdfs:range vivo:InformationResource ;
       rdfs:subPropertyOf owl:topObjectProperty , dco:distributionFor ;
-      owl:inverseOf dco:hasDistribution .
+      owl:inverseOf dco:hasDistribution ;
+      rdfs:comment  """
+      Links a distribution back to the information resource, such as
+      publication or dataset.
+      """^^rdf:XMLLiteral .
 
 dco:fileFor
       a       owl:ObjectProperty ;
@@ -854,20 +1179,42 @@ dco:fileFor
       rdfs:label "file or link for"@en-US ;
       rdfs:range dcat:Distribution ;
       rdfs:subPropertyOf owl:topObjectProperty , dco:fileFor ;
-      owl:inverseOf dco:hasFile .
+      owl:inverseOf dco:hasFile ;
+      rdfs:comment  """
+      Links a container of data or information back to the
+      distribution that it is a part of.
+      """^^rdf:XMLLiteral .
 
 dco:hasDataset
       a       owl:ObjectProperty ;
       rdfs:domain foaf:Person ;
       rdfs:label "Add Dataset"@en-US ;
-      rdfs:subPropertyOf owl:topObjectProperty .
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:comment  """
+      Links a person to a dataset that they participated in the creation
+      of.
+      """^^rdf:XMLLiteral .
 
 dco:hasDataType
       a       owl:ObjectProperty ;
       rdfs:comment "A dataset has one or more data types." ;
       rdfs:domain vivo:Dataset ;
       rdfs:label "has data type"@en-US ;
-      rdfs:range dco:DataType .
+      rdfs:range dco:DataType ;
+      rdfs:comment  """
+      Links a collection of data to a particular kind of data item that
+      is contained within it.
+      """^^rdf:XMLLiteral .
+
+dco:relatedDataset
+      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:domain vivo:Project ;
+      rdfs:label "Related datasets"@en-US ;
+      rdfs:range vivo:Dataset ;
+      owl:inverseOf dco:isDatasetOf ;
+      rdfs:comment  """
+      Relates a dataset to a project that created or used it.
+      """^^rdf:XMLLiteral .
 
 ##### Instruments
 dco:instrumentUsedBy
@@ -875,14 +1222,22 @@ dco:instrumentUsedBy
       rdfs:domain obo:ERO_0000004 ;
       rdfs:label "Instrument used in (e.g. project)"@en-US ;
       rdfs:range vivo:Project ;
-      owl:inverseOf dco:usesInstrument .
+      owl:inverseOf dco:usesInstrument ;
+      rdfs:comment  """
+      Links an instrument to a project that uses the instrument to
+      collect information related to the goal of the project.
+      """^^rdf:XMLLiteral .
 
 dco:createdInstrument
       a       owl:ObjectProperty ;
       rdfs:domain vivo:Project ;
       rdfs:label "Created Instrument"@en-US ;
       rdfs:range obo:ERO_0000004 ;
-      owl:inverseOf dco:instrumentCreatedBy .
+      owl:inverseOf dco:instrumentCreatedBy ;
+      rdfs:comment  """
+      Associates an instrument with the project that funded the design
+      and or creation of the instrument.
+      """^^rdf:XMLLiteral .
 
 dco:instrumentCreatedBy
       a       owl:ObjectProperty ;
@@ -890,96 +1245,120 @@ dco:instrumentCreatedBy
       rdfs:label "Instrument Created By"@en-US ;
       rdfs:range vivo:Project ;
       owl:inverseOf dco:createdInstrument .
-
-##### Misc
-dco:hasLongitude
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:label "longitude (decimal)"@en-US .
-
-dco:relatedProject
-      a       owl:ObjectProperty ;
-      rdfs:label "Related projects or field studies"@en-US .
-
-dco:inLanguage
-      a       owl:DatatypeProperty ;
-      rdfs:label "in language"@en-US ;
-      rdfs:subPropertyOf owl:topDataProperty , dco:inLanguage .
-
-dco:Analysis
-      a       owl:Class ;
-      rdfs:label "Analysis"@en-US ;
-      rdfs:subClassOf owl:Thing , dco:Activity , dco:Object ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom dco:ResearchCommunity ;
-                owl:onProperty dco:associatedDCOCommunity
-              ] ;
-      owl:equivalentClass dco:Analysis .
-
-dco:relatedDataset
-      a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:domain vivo:Project ;
-      rdfs:label "Related datasets"@en-US ;
-      rdfs:range vivo:Dataset ;
-      owl:inverseOf dco:isDatasetOf .
-
-dco:Outreach
-      a       owl:Class ;
-      rdfs:label "Outreach"@en-US ;
-      rdfs:subClassOf event:Event , owl:Thing , dco:Object ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom xsd:boolean ;
-                owl:onProperty dco:isDCOPublication
-              ] ;
-      owl:equivalentClass dco:Outreach .
-
-dco:hasLatitude
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:label "latitude (decimal)"@en-US .
-
-dco:dateModified
-      a       owl:ObjectProperty ;
-      rdfs:domain vivo:InformationResource ;
-      rdfs:label "date modified"@en-US ;
-      rdfs:range vivo:DateTimeValue ;
-      rdfs:subPropertyOf owl:topObjectProperty , vivo:dateTimeValue , dco:dateModified .
-
-dco:runningTitle
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain vivo:Project ;
-      rdfs:label "running title"@en-US .
-
-dco:downloadURL
-      a       owl:DatatypeProperty ;
-      rdfs:label "download URL"@en-US ;
-      rdfs:subPropertyOf dco:downloadURL , owl:topDataProperty .
-
-dco:submittedBy
-      a       owl:ObjectProperty ;
-      rdfs:label "submitted by"@en-US ;
-      rdfs:range foaf:Person ;
-      rdfs:subPropertyOf owl:topObjectProperty .
-
-dco:hasElevation
-      a       owl:DatatypeProperty ;
-      rdfs:label "elevation"@en-US .
+      rdfs:comment  """
+      Links a project to an instrument that was designed or created as
+      part of the project.
+      """^^rdf:XMLLiteral .
 
 dco:usesInstrument
       a       owl:ObjectProperty ;
       rdfs:domain vivo:Project ;
       rdfs:label "Has instrument"@en-US ;
       rdfs:range obo:ERO_0000004 ;
-      owl:inverseOf dco:instrumentUsedBy .
+      owl:inverseOf dco:instrumentUsedBy ;
+      rdfs:comment  """
+      Relates an instrument to a project that uses the instrument to
+      collect data or information.
+      """^^rdf:XMLLiteral .
+
+##### Misc
+dco:hasLongitude
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:label "longitude (decimal)"@en-US ;
+      rdfs:comment  """
+      Relates a thing to the angular distance of a place east or west of
+      the meridian at Greenwich, England, or west of the standard
+      meridian of a celestial object, where the thing is or was, usually
+      expressed in degrees and minutes.
+      """^^rdf:XMLLiteral .
+
+dco:hasLatitude
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:label "latitude (decimal)"@en-US ;
+      rdfs:comment  """
+      Relates a thing to the angular distance of a place north or south
+      of the earth's equator, or of a celestial object north or south of
+      the celestial equator, where the thing is or was, usually
+      expressed in degrees and minutes.
+      """^^rdf:XMLLiteral .
+
+dco:hasElevation
+      a       owl:DatatypeProperty ;
+      rdfs:label "elevation"@en-US ;
+      rdfs:comment  """
+      Relates the height of a given element to a given level, especially
+      sea level.
+      """^^rdf:XMLLiteral .
+
+dco:relatedProject
+      a       owl:ObjectProperty ;
+      rdfs:label "Related projects or field studies"@en-US ;
+      rdfs:comment  """
+      Relates an entity to a project.
+      """^^rdf:XMLLiteral .
+
+dco:inLanguage
+      a       owl:DatatypeProperty ;
+      rdfs:label "in language"@en-US ;
+      rdfs:subPropertyOf owl:topDataProperty , dco:inLanguage ;
+      rdfs:comment  """
+      A language, spoken or written, that an entity is represented by,
+      such as a publication.
+      """^^rdf:XMLLiteral .
+
+dco:dateModified
+      a       owl:ObjectProperty ;
+      rdfs:domain vivo:InformationResource ;
+      rdfs:label "date modified"@en-US ;
+      rdfs:range vivo:DateTimeValue ;
+      rdfs:subPropertyOf owl:topObjectProperty , vivo:dateTimeValue , dco:dateModified ;
+      rdfs:comment  """
+      Specifies when an information resource, such as a publication or
+      dataset, was last updated, either added or edited.
+      """^^rdf:XMLLiteral .
+
+dco:runningTitle
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:domain vivo:Project ;
+      rdfs:label "running title"@en-US ;
+      rdfs:comment  """
+      The label that is associated with a project that has not yet been
+      made the official label.
+      """^^rdf:XMLLiteral .
+
+dco:downloadURL
+      a       owl:DatatypeProperty ;
+      rdfs:label "download URL"@en-US ;
+      rdfs:subPropertyOf dco:downloadURL , owl:topDataProperty .
+      rdfs:comment  """
+      The URL used to access an entity, such as a publication or dataset.
+      """^^rdf:XMLLiteral .
+
+dco:submittedBy
+      a       owl:ObjectProperty ;
+      rdfs:label "submitted by"@en-US ;
+      rdfs:range foaf:Person ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+      rdfs:comment  """
+      Relates an entity to a person who submitted that entity for usage
+      in an activity. 
+      """^^rdf:XMLLiteral .
 
 dco:accessURL
       a       owl:DatatypeProperty ;
       rdfs:label "access URL"@en-US ;
-      rdfs:subPropertyOf owl:topDataProperty , dco:accessURL .
+      rdfs:subPropertyOf owl:topDataProperty , dco:accessURL ;
+      rdfs:comment  """
+      The URL used to download an entity, such as a publication or dataset.
+      """^^rdf:XMLLiteral .
 
 dco:projectLink
       a       owl:DatatypeProperty ;
       rdfs:domain vivo:Project ;
       rdfs:label "Information Links"@en-US ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:comment  """
+      A link pointing to a page or site that describes and contains
+      information about a project.
+      """^^rdf:XMLLiteral .
 
