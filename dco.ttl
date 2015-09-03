@@ -891,7 +891,8 @@ dco:IGSN
 ##### DataTypes
 dco:DataType
       a       dco:Object , prov:Entity , owl:Class ;
-      rdfs:comment "A data type is often treated as a purely syntactic
+      rdfs:comment  """
+      A data type is often treated as a purely syntactic
       label associated with a variable when it is declared, such as
       integer, float, boolean, character, and string, etc. Such
       definitions of 'data type' do not give any semantic meaning to the
@@ -903,7 +904,8 @@ dco:DataType
       that use the data type, etc. The intent is that any humans or
       machines that when they encounter that data type can quickly
       'understand' or be in a situation to at least 'process' details
-      within the dataset without even downloading that dataset." ;
+      within the dataset without even downloading that dataset.
+      """^^rdf:XMLLiteral ;
       rdfs:label "Data Type"@en-US ;
       rdfs:subClassOf dco:Object , prov:Entity ;
       skos:definition "A data type is the representation of particular qualities or features that a group of datasets share." .
@@ -1039,7 +1041,7 @@ dco:ResearchAdministration
       a       owl:Class ;
       rdfs:label "Research Administration"@en-US ;
       rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
-      owl:equivalentClass dco:ResearchAdministration .
+      owl:equivalentClass dco:ResearchAdministration ;
       rdfs:comment  """
       An group of people who administer the resources of a research
       community.
@@ -1155,7 +1157,7 @@ dco:isDatasetOf
       rdfs:domain vivo:Dataset ;
       rdfs:label "Is Dataset Of"@en-US ;
       rdfs:range vivo:Project ;
-      owl:inverseOf dco:relatedDataset .
+      owl:inverseOf dco:relatedDataset ;
       rdfs:comment  """
       Links a dataset back to the project from which the data was
       collected.
@@ -1244,7 +1246,7 @@ dco:instrumentCreatedBy
       rdfs:domain obo:ERO_0000004 ;
       rdfs:label "Instrument Created By"@en-US ;
       rdfs:range vivo:Project ;
-      owl:inverseOf dco:createdInstrument .
+      owl:inverseOf dco:createdInstrument ;
       rdfs:comment  """
       Links a project to an instrument that was designed or created as
       part of the project.
@@ -1329,7 +1331,7 @@ dco:runningTitle
 dco:downloadURL
       a       owl:DatatypeProperty ;
       rdfs:label "download URL"@en-US ;
-      rdfs:subPropertyOf dco:downloadURL , owl:topDataProperty .
+      rdfs:subPropertyOf dco:downloadURL , owl:topDataProperty ;
       rdfs:comment  """
       The URL used to access an entity, such as a publication or dataset.
       """^^rdf:XMLLiteral .
@@ -1338,7 +1340,7 @@ dco:submittedBy
       a       owl:ObjectProperty ;
       rdfs:label "submitted by"@en-US ;
       rdfs:range foaf:Person ;
-      rdfs:subPropertyOf owl:topObjectProperty .
+      rdfs:subPropertyOf owl:topObjectProperty ;
       rdfs:comment  """
       Relates an entity to a person who submitted that entity for usage
       in an activity. 
