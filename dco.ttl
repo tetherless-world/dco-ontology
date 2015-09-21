@@ -897,7 +897,7 @@ dco:DataType
       integer, float, boolean, character, and string, etc. Such
       definitions of 'data type' do not give any semantic meaning to the
       data types. In the context of this ontology, a data type can
-      include more meanings beyond the syntax, such as who created the
+      include more meaning beyond the syntax, such as who created the
       data type, the source standard that the data type derives from,
       the operations that can be done on datasets of that data type, and
       typical scientific domains, software programs and/or instruments
@@ -912,28 +912,72 @@ dco:DataType
 
 dco:Parameter
       a       dco:Object , prov:Entity , owl:Class ;
-      rdfs:comment "A data type may consist of a list of parameters." ;
-      rdfs:label "Parameter"@en-US ;
+      rdfs:comment  """
+      The data type includes a set of variables that define its usage. A
+      user can find a datatype and know to expect these parameters to be
+      a part of the dataset that the data type is associated with.
+      Another use is that someone can find a datatype that a variable is
+      a part of and then find additional datasets that this datatype is
+      associated with.
+      """^^rdf:XMLLiteral ;
+      rdfs:label "DataType Parameter"@en-US ;
       rdfs:subClassOf dco:Object , prov:Entity ;
       skos:definition "An input variable of a data type." .
 
+dco:hasParameter
+      a       owl:ObjectProperty ;
+      rdfs:comment "Link a DataType with variables that make up the DataType" ;
+      rdfs:domain dco:DataType ;
+      rdfs:label "has parameter" ;
+      rdfs:range dco:Parameter .
+
 dco:hasUnit
       a       owl:DatatypeProperty ;
-      rdfs:comment "Using this property to annoate the unit, e.g. integer, float, string, etc. of a parameter." ;
+      rdfs:comment  """
+      Annotate the unit, e.g. meter, degree, dollar, etc. of a parameter.
+      """^^rdf:XMLLiteral ;
       rdfs:domain dco:Parameter ;
       rdfs:label "has unit" ;
       rdfs:range xsd:string .
 
+dco:expectedUses
+      a       owl:DatatypeProperty ;
+      rdfs:comment  """
+      describes any additional constraints, comments or notes about a
+      data type.
+      """^^rdf:XMLLiteral ;
+      rdfs:domain dco:DataType ;
+      rdfs:label "expected uses" ;
+      rdfs:range xsd:string .
+
+dco:dataTypeSubjectArea
+      a       owl:ObjectProperty ;
+      rdfs:comment  """
+      Associates a data type with the different defined domains of
+      knowledge and skill within the Deep Carbon Observatory community.
+      """^^rdf:XMLLiteral ;
+      rdfs:domain dco:DataType ;
+      rdfs:label "has data type subject area" ;
+      rdfs:range skos:Concept ;
+      rdfs:subPropertyOf vivo:hasSubjectArea .
+
 dco:createdAtTime
       a       owl:DatatypeProperty ;
-      rdfs:comment "The initial time of creation of a data type." ;
+      rdfs:comment  """
+      Part of the provenance of a data type, at what time was the data
+      type created.
+      """^^rdf:XMLLiteral ;
       rdfs:domain dco:DataType ;
       rdfs:label "created at time" ;
       rdfs:range xsd:dateTime .
 
 dco:sourceStandard
       a       owl:ObjectProperty ;
-      rdfs:comment "A data type may quote one or more standards." ;
+      rdfs:comment  """
+      A data type may be derived from one or more universally or widely
+      accepted, agreed upon, or established means of determining what
+      something should be.
+      """^^rdf:XMLLiteral ;
       rdfs:domain dco:DataType ;
       rdfs:label "has source standard" ;
       rdfs:range bibo:Standard ;
@@ -941,40 +985,26 @@ dco:sourceStandard
 
 dco:sourceDataType
       a       owl:ObjectProperty ;
-      rdfs:comment "A data type may be derived from one or more existing data types." ;
+      rdfs:comment  """
+      Part of the provenance of a data type, a data type may be derived
+      from one or more existing data types.  For example, a data type
+      can add one or more variables to an existing data type making it a
+      new data type.
+      """^^rdf:XMLLiteral ;
       rdfs:domain dco:DataType ;
       rdfs:label "has source data type" ;
       rdfs:range dco:DataType ;
       rdfs:subPropertyOf prov:wasDerivedFrom .
 
-dco:expectedUses
-      a       owl:DatatypeProperty ;
-      rdfs:comment "Using this property to describe any additional constraints, comments or notes about a data type." ;
-      rdfs:domain dco:DataType ;
-      rdfs:label "expected uses" ;
-      rdfs:range xsd:string .
-
 dco:lastModifiedAtTime
       a       owl:DatatypeProperty ;
-      rdfs:comment "The most recent time that a data type was modified." ;
+      rdfs:comment  """
+      Part of the provenance of a data type this property represents
+      the most recent time that a data type was modified
+      """^^rdf:XMLLiteral ;
       rdfs:domain dco:DataType ;
       rdfs:label "last modified at time" ;
       rdfs:range xsd:dateTime .
-
-dco:hasParameter
-      a       owl:ObjectProperty ;
-      rdfs:comment "Using this property to link between a data type and its parameters." ;
-      rdfs:domain dco:DataType ;
-      rdfs:label "has parameter" ;
-      rdfs:range dco:Parameter .
-
-dco:dataTypeSubjectArea
-      a       owl:ObjectProperty ;
-      rdfs:comment "Using this property to annoate the keywords of a data type." ;
-      rdfs:domain dco:DataType ;
-      rdfs:label "has data type subject area" ;
-      rdfs:range skos:Concept ;
-      rdfs:subPropertyOf vivo:hasSubjectArea .
 
 ##### Organizations
 dco:Collaboration
