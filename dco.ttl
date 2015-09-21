@@ -910,7 +910,7 @@ dco:DataType
       rdfs:subClassOf dco:Object , prov:Entity ;
       skos:definition "A data type is the representation of particular qualities or features that a group of datasets share." .
 
-dco:Parameter
+dco:DataTypeParameter
       a       dco:Object , prov:Entity , owl:Class ;
       rdfs:comment  """
       The data type includes a set of variables that define its usage. A
@@ -924,19 +924,19 @@ dco:Parameter
       rdfs:subClassOf dco:Object , prov:Entity ;
       skos:definition "An input variable of a data type." .
 
-dco:hasParameter
+dco:hasDataTypeParameter
       a       owl:ObjectProperty ;
       rdfs:comment "Link a DataType with variables that make up the DataType" ;
       rdfs:domain dco:DataType ;
       rdfs:label "has parameter" ;
-      rdfs:range dco:Parameter .
+      rdfs:range dco:DataTypeParameter .
 
 dco:hasUnit
       a       owl:DatatypeProperty ;
       rdfs:comment  """
       Annotate the unit, e.g. meter, degree, dollar, etc. of a parameter.
       """^^rdf:XMLLiteral ;
-      rdfs:domain dco:Parameter ;
+      rdfs:domain dco:DataTypeParameter ;
       rdfs:label "has unit" ;
       rdfs:range xsd:string .
 
@@ -1229,13 +1229,24 @@ dco:hasDataset
 
 dco:hasDataType
       a       owl:ObjectProperty ;
-      rdfs:comment "A dataset has one or more data types." ;
       rdfs:domain vivo:Dataset ;
       rdfs:label "has data type"@en-US ;
       rdfs:range dco:DataType ;
+      owl:inverseOf dco:dataTypeForDataset ;
       rdfs:comment  """
       Links a collection of data to a particular kind of data item that
       is contained within it.
+      """^^rdf:XMLLiteral .
+
+dco:dataTypeForDataset
+      a owl:ObjectProperty ;
+      rdfs:label "data type for dataset"@en-US ;
+      rdfs:domain dco:DataType ;
+      rdfs:range vivo:Dataset ;
+      owl:inverseOf dco:hasDataType ;
+      rdfs:comment """
+      Links a particular kind of data item that is a part of a
+      collection of data.
       """^^rdf:XMLLiteral .
 
 dco:relatedDataset
