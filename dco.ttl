@@ -223,7 +223,7 @@ dco:Poster
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty dco:isDCOPublication
+                owl:onProperty dco:isContributionToDCO
               ] ;
       owl:equivalentClass dco:Poster ;
       rdfs:comment  """
@@ -237,7 +237,7 @@ dco:GovernmentReport
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty dco:isDCOPublication
+                owl:onProperty dco:isContributionToDCO
               ] ;
       owl:equivalentClass dco:GovernmentReport ;
       rdfs:comment  """
@@ -251,7 +251,7 @@ dco:WebArticle
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty dco:isDCOPublication
+                owl:onProperty dco:isContributionToDCO
               ] ;
       owl:equivalentClass dco:WebArticle ;
       rdfs:comment  """
@@ -265,7 +265,7 @@ dco:Broadcast
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty dco:isDCOPublication
+                owl:onProperty dco:isContributionToDCO
               ] ;
       owl:equivalentClass dco:Broadcast ;
       rdfs:comment  """
@@ -288,7 +288,7 @@ dco:MagazineArticle
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty dco:isDCOPublication
+                owl:onProperty dco:isContributionToDCO
               ] ;
       owl:equivalentClass dco:MagazineArticle ;
       rdfs:comment  """
@@ -310,7 +310,7 @@ dco:JournalArticle
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:boolean ;
-                owl:onProperty dco:isDCOPublication
+                owl:onProperty dco:isContributionToDCO
               ] ;
       owl:equivalentClass dco:JournalArticle ;
       rdfs:comment  """
@@ -336,7 +336,7 @@ dco:BookSeries
       A sequence of books having certain characteristics in common that are formally identified together as a group.
       """^^rdf:XMLLiteral .
 
-dco:isDCOPublication
+dco:isContributionToDCO
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:label "is DCO publication"@en-US ;
       rdfs:range xsd:string ;

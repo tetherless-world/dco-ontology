@@ -298,7 +298,7 @@ dco:ResearchCommunity
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
-dco:isDCOPublication
+dco:isContributionToDCO
       vitro:descriptionAnnot
               "Is this work a result of DCO-related research? (enter \"YES\" or \"NO\" only)"^^xsd:string ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
