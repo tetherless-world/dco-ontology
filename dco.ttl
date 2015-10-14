@@ -890,7 +890,7 @@ dco:IGSN
 
 ##### DataTypes
 dco:DataType
-      a       dco:Object , prov:Entity , owl:Class ;
+      a       owl:Class ;
       rdfs:comment  """
       A data type is often treated as a purely syntactic
       label associated with a variable when it is declared, such as
@@ -911,7 +911,7 @@ dco:DataType
       skos:definition "A data type is the representation of particular qualities or features that a group of datasets share." .
 
 dco:DataTypeParameter
-      a       dco:Object , prov:Entity , owl:Class ;
+      a       owl:Class ;
       rdfs:comment  """
       The data type includes a set of variables that define its usage. A
       user can find a datatype and know to expect these parameters to be
