@@ -813,32 +813,6 @@ dco:GeoSample
       a       owl:Class ;
       rdfs:label "GeoSample"@en-US ;
       rdfs:subClassOf vivo:InformationResource ;
-	  ### May need to discuss the restrictions below if they mean to be the REQUIRED properties of a sample
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasElevation
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasMaterial
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasLongitude
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasLatitude
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasSampleAge
-              ] ;
       rdfs:comment  """
       A specimen or small quantity of a geophysical material.
       """^^rdf:XMLLiteral .
