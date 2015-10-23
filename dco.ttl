@@ -813,6 +813,7 @@ dco:GeoSample
       a       owl:Class ;
       rdfs:label "GeoSample"@en-US ;
       rdfs:subClassOf vivo:InformationResource ;
+	  ### May need to discuss the restrictions below if they mean to be the REQUIRED properties of a sample
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom rdfs:Literal ;
@@ -878,7 +879,7 @@ dco:hasSampleAge
       The time that a sample was deposited in the earth.
       """^^rdf:XMLLiteral .
 
-dco:IGSN
+dco:hasIgsn
       a       owl:FunctionalProperty , owl:DatatypeProperty ;
       rdfs:domain dco:GeoSample ;
       rdfs:label "IGSN"@en-US ;
@@ -888,6 +889,31 @@ dco:IGSN
       assigned to a geo sample.
       """^^rdf:XMLLiteral .
 
+dco:sampleRegistrant
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:GeoSample ;
+      rdfs:label "sample registrant"@en-US ;
+      rdfs:range foaf:Person ;
+      rdfs:comment  """
+      The person who registered the sample.
+      """^^rdf:XMLLiteral .
+
+dco:sampleType
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:domain dco:GeoSample ;
+      rdfs:label "sample type"@en-US ;
+      rdfs:comment  """
+      The type of a sample.
+      """^^rdf:XMLLiteral .
+
+dco:isPublic
+      a       owl:FunctionalProperty , owl:DatatypeProperty ;
+      rdfs:domain dco:GeoSample ;
+      rdfs:label "is public"@en-US ;
+      rdfs:comment  """
+      The sample is open for public access or not.
+      """^^rdf:XMLLiteral .
+	  
 ##### DataTypes
 dco:DataType
       a       dco:Object , prov:Entity , owl:Class ;
