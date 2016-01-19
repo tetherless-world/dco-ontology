@@ -140,17 +140,6 @@ dco:skype
       A person's identifier used for the Skype application.
       """^^rdf:XMLLiteral .
 
-dco:inOrganization
-      a       owl:ObjectProperty ;
-      rdfs:domain foaf:Person ;
-      rdfs:label "organization"@en-US ;
-      rdfs:range foaf:Organization ;
-      rdfs:subPropertyOf dco:inOrganization , owl:topObjectProperty ;
-      owl:inverseOf dco:hasPeople ;
-      rdfs:comment  """
-      Property which links a person with the organization that they play a role in.
-      """^^rdf:XMLLiteral .
-
 dco:shortName
       a       owl:DatatypeProperty ;
       rdfs:domain foaf:Person ;
@@ -731,11 +720,6 @@ dco:ResearchVessel
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom dco:PortalGroup ;
-                owl:onProperty dco:associatedDCOPortalGroup
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:anyURI ;
                 owl:onProperty dco:vesselTrackingURL
               ] ;
@@ -1013,11 +997,6 @@ dco:Collaboration
       rdfs:subClassOf owl:Thing , dco:Object ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom dco:PortalGroup ;
-                owl:onProperty dco:associatedDCOPortalGroup
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:allValuesFrom dco:ResearchCommunity ;
                 owl:onProperty dco:associatedDCOCommunity
               ] ;
@@ -1029,22 +1008,11 @@ dco:Collaboration
 dco:ResearchCommunity
       a       owl:Class ;
       rdfs:label "Research Community"@en-US ;
-      rdfs:subClassOf vivo:ResearchOrganization , foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
+      rdfs:subClassOf foaf:Group , owl:Thing , foaf:Agent , dco:Object ;
       owl:equivalentClass dco:ResearchCommunity ;
       rdfs:comment  """
       A group of people who are working together in a specific science
       domain.
-      """^^rdf:XMLLiteral .
-
-dco:PortalGroup
-      a       owl:Class ;
-      rdfs:label "Portal Group"@en-US ;
-      rdfs:subClassOf foaf:Organization , owl:Thing , foaf:Agent , dco:Object ;
-      owl:equivalentClass dco:PortalGroup ;
-      rdfs:comment  """
-      A collaboration amongst 2 or more people working towards a common
-      goal. For example the Portal Development Group of the Deep Carbon
-      Observatory.
       """^^rdf:XMLLiteral .
 
 dco:Activity
@@ -1055,11 +1023,6 @@ dco:Activity
               [ a       owl:Restriction ;
                 owl:allValuesFrom dco:ResearchCommunity ;
                 owl:onProperty dco:associatedDCOCommunity
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom dco:PortalGroup ;
-                owl:onProperty dco:associatedDCOPortalGroup
               ] ;
       owl:equivalentClass dco:Activity ;
       rdfs:comment  """
@@ -1096,27 +1059,6 @@ dco:associatedDCOCommunity
       dataset.
       """^^rdf:XMLLiteral .
 
-dco:associatedDCOPortalGroup
-      a       owl:ObjectProperty ;
-      rdfs:label "associated DCO portal group"@en-US ;
-      rdfs:range dco:PortalGroup ;
-      rdfs:subPropertyOf dco:associatedDCOPortalGroup , owl:topObjectProperty ;
-      rdfs:comment  """
-      Relates a portal group to an entity such as a publication or
-      dataset.
-      """^^rdf:XMLLiteral .
-
-dco:hasPeople
-      a       owl:ObjectProperty ;
-      rdfs:domain foaf:Organization ;
-      rdfs:label "has people"@en-US ;
-      rdfs:range foaf:Person ;
-      rdfs:subPropertyOf owl:topObjectProperty , dco:hasPeople ;
-      owl:inverseOf dco:inOrganization ;
-      rdfs:comment  """
-      An individual who is a part of an organization.
-      """^^rdf:XMLLiteral .
-
 dco:relatedOrganization
       a       owl:ObjectProperty , owl:SymmetricProperty ;
       rdfs:domain foaf:Organization ;
@@ -1142,11 +1084,6 @@ dco:File
               [ a       owl:Restriction ;
                 owl:allValuesFrom rdfs:Literal ;
                 owl:onProperty dco:downloadURL
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom dco:PortalGroup ;
-                owl:onProperty dco:associatedDCOPortalGroup
               ] ;
       owl:equivalentClass dco:File ;
       rdfs:comment  """
