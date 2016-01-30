@@ -1024,6 +1024,11 @@ dco:Activity
                 owl:allValuesFrom dco:ResearchCommunity ;
                 owl:onProperty dco:associatedDCOCommunity
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:Team ;
+                owl:onProperty dco:associatedDCOTeam
+              ] ;
       owl:equivalentClass dco:Activity ;
       rdfs:comment  """
       Something that a person or group does or has done. For example,
