@@ -1363,6 +1363,9 @@ dco:builtDuringInitiative
       rdfs:domain dco:Instrument ;
       rdfs:label "built during initiative"@en-US ;
       rdfs:range dco:InstrumentInitiative ;
+      rdfs:comment  """
+      The physical device (Instrument) was constructed during a particular activity
+      """^^rdf:XMLLiteral ;
       owl:inverseOf dco:builtInstrument .
 
 dco:builtInstrument
@@ -1370,11 +1373,17 @@ dco:builtInstrument
       rdfs:domain dco:InstrumentInitiative ;
       rdfs:label "built Instrument"@en-US ;
       rdfs:range dco:Instrument ;
+      rdfs:comment  """
+      The physical device (Instrument) was built during a particular activity
+      """^^rdf:XMLLiteral ;
       owl:inverseOf dco:builtDuringInitiative .
 
 dco:instrInitiativeNews
       a       owl:ObjectProperty ;
       rdfs:label "Related News Article"@en-US ;
+      rdfs:comment  """
+      links to news articles that report on the activities of designing and/or building an instrument
+      """^^rdf:XMLLiteral ;
       rdfs:subPropertyOf owl:topObjectProperty .
 
 dco:designedDuringInitiative
@@ -1382,6 +1391,9 @@ dco:designedDuringInitiative
       rdfs:domain dco:Instrument ;
       rdfs:label "designed during Initiative"@en-US ;
       rdfs:range dco:InstrumentInitiative ;
+      rdfs:comment  """
+      The physical device (Instrument) was designed during a specific activity
+      """^^rdf:XMLLiteral ;
       owl:inverseOf dco:designedInstrument .
 
 dco:designedInstrument
@@ -1389,6 +1401,9 @@ dco:designedInstrument
       rdfs:domain dco:InstrumentInitiative ;
       rdfs:label "designed Instrument"@en-US ;
       rdfs:range dco:Instrument ;
+      rdfs:comment  """
+      The physical device (Instrument) was designed during a specific activity
+      """^^rdf:XMLLiteral ;
       owl:inverseOf dco:designedDuringInitiative .
 
 dco:ofInstrumentDesign
@@ -1396,6 +1411,9 @@ dco:ofInstrumentDesign
       rdfs:domain dco:Instrument ;
       rdfs:label "of Instrument Design"@en-US ;
       rdfs:range dco:InstrumentDesign ;
+      rdfs:comment  """
+      The physical device (Instrument) was designed by the design activity
+      """^^rdf:XMLLiteral ;
       owl:inverseOf dco:instrumentBuilt .
 
 dco:instrumentBuilt
@@ -1403,11 +1421,17 @@ dco:instrumentBuilt
       rdfs:domain dco:InstrumentDesign ;
       rdfs:label "instrument Built"@en-US ;
       rdfs:range dco:Instrument ;
+      rdfs:comment  """
+      The manifestation of a physical device (Instrument) given a design
+      """^^rdf:XMLLiteral ;
       owl:inverseOf dco:ofInstrumentDesign .
 
 dco:PointOfContact
       a       owl:Class ;
       rdfs:label "Point of Contact"@en-US ;
+      rdfs:comment  """
+      The agent that is to be contacted for information related to a particular entity
+      """^^rdf:XMLLiteral ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
@@ -1422,18 +1446,27 @@ dco:PointOfContact
 dco:hasPointOfContact
       a       owl:ObjectProperty ;
       rdfs:label "point of contact"@en-US ;
+      rdfs:comment  """
+      Any information related to a particular entity can be gathered by contacting a particular agent
+      """^^rdf:XMLLiteral ;
       rdfs:range dco:PointOfContact .
 
 dco:hasContact
       a       owl:ObjectProperty ;
       rdfs:domain dco:PointOfContact ;
       rdfs:label "contact"@en-US ;
+      rdfs:comment  """
+      The Agent to be contacted
+      """^^rdf:XMLLiteral ;
       rdfs:range foaf:Agent .
 
 dco:hasContactInformation
       a       owl:DatatypeProperty ;
       rdfs:domain dco:PointOfContact ;
       rdfs:label "contact information"@en-US ;
+      rdfs:comment  """
+      The inforamtion to be used to contact the Agent, such as email address
+      """^^rdf:XMLLiteral ;
       rdfs:range xsd:string .
 
 ##### Misc
