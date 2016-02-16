@@ -1621,6 +1621,10 @@ dco:Instrument
       owl:disjointWith dco:InstrumentDesign .
 
 dco:builtDuringInitiative
+      vitro:displayLimitAnnot
+              "10"^^xsd:int ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
       obo:IAO_0000112 "The DCO Computer Cluster was built during the DCO Computer Cluster Initiative"^^xsd:string ;
       vitro:descriptionAnnot
               "The specified Instrument was built as part of an Instrument Initiative"^^xsd:string ;
