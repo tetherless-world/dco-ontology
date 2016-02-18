@@ -1209,6 +1209,11 @@ dco:InstrumentInitiative
       """^^rdf:XMLLiteral ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom owl:Thing ;
+                owl:onProperty core:hasSubjectArea
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom dco:ResearchCommunity ;
                 owl:onProperty dco:associatedDCOCommunity
               ] ;
@@ -1277,7 +1282,7 @@ dco:Instrument
       rdfs:label "DCO Instrument"@en-US ;
       rdfs:comment  """
       a tool or device designed to do careful and exact work
-      """^^rdf:XMLLiteral .
+      """^^rdf:XMLLiteral ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom core:Grant ;
