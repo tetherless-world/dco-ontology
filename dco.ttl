@@ -1055,11 +1055,20 @@ dco:ResearchAdvisoryCommittee
 
 dco:associatedDCOCommunity
       a       owl:ObjectProperty ;
-      rdfs:label "associated DCO community"@en-US ;
+      rdfs:label "associated DCO Community"@en-US ;
       rdfs:range dco:ResearchCommunity ;
       rdfs:comment  """
       Relates a research community to an entity such as a publication or
       dataset.
+      """^^rdf:XMLLiteral .
+
+dco:associatedDCOTeam
+      a       owl:ObjectProperty ;
+      rdfs:label "associated DCO Team"@en-US ;
+      rdfs:range dco:Team ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:comment  """
+      Relates a group of people working together on a common task
       """^^rdf:XMLLiteral .
 
 dco:relatedOrganization
@@ -1216,6 +1225,16 @@ dco:InstrumentInitiative
               [ a       owl:Restriction ;
                 owl:allValuesFrom dco:ResearchCommunity ;
                 owl:onProperty dco:associatedDCOCommunity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:int ;
+                owl:onProperty dco:importance
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty dco:importance
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1393,7 +1412,7 @@ dco:instrInitiativeNews
 
 dco:designedDuringInitiative
       a       owl:ObjectProperty ;
-      rdfs:domain dco:Instrument ;
+      rdfs:domain dco:InstrumentDesign ;
       rdfs:label "designed during Initiative"@en-US ;
       rdfs:range dco:InstrumentInitiative ;
       rdfs:comment  """
@@ -1405,7 +1424,7 @@ dco:designedInstrument
       a       owl:ObjectProperty ;
       rdfs:domain dco:InstrumentInitiative ;
       rdfs:label "designed Instrument"@en-US ;
-      rdfs:range dco:Instrument ;
+      rdfs:range dco:InstrumentDesign ;
       rdfs:comment  """
       The physical device (Instrument) was designed during a specific activity
       """^^rdf:XMLLiteral ;
@@ -1454,7 +1473,17 @@ dco:hasPointOfContact
       rdfs:comment  """
       Any information related to a particular entity can be gathered by contacting a particular agent
       """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:pointOfContactFor ;
       rdfs:range dco:PointOfContact .
+
+dco:pointOfContactFor
+      a       owl:ObjectProperty ;
+      rdfs:label "point of contact for"@en-US ;
+      rdfs:comment  """
+      The agent is a contact for a particular entity
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:hasPointOfContact ;
+      rdfs:domain dco:PointOfContact .
 
 dco:hasContact
       a       owl:ObjectProperty ;
@@ -1574,4 +1603,12 @@ dco:projectLink
       A link pointing to a page or site that describes and contains
       information about a project.
       """^^rdf:XMLLiteral .
+
+dco:importance
+      a       owl:DatatypeProperty ;
+      rdfs:label "importance"@en-US ;
+      rdfs:comment """
+      A helper property to help determine the importance of something to display on a page
+      """^^rdf:XMLLiteral ;
+      rdfs:range xsd:int .
 
