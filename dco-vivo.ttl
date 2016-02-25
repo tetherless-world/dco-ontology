@@ -1762,6 +1762,20 @@ dco:hasPointOfContact
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
+dco:pointOfContactFor
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
 dco:hasContact
       obo:IAO_0000112 "Peter Fox is the contact for the DCO Computer Cluster between February 2012 to April 2016"^^xsd:string ;
       vitro:descriptionAnnot
