@@ -298,6 +298,21 @@ dco:ResearchCommunity
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
+dco:Team
+      ero:IAO_0000112 "DCO Data Science Team"^^xsd:string ;
+      ero:IAO_0000115 "A team of people coordinating the efforts of the DCO Community"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupAgent> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
 dco:isContributionToDCO
       vitro:descriptionAnnot
               "Is this work a result of DCO-related research? (enter \"YES\" or \"NO\" only)"^^xsd:string ;

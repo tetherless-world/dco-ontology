@@ -1013,6 +1013,14 @@ dco:ResearchCommunity
       domain.
       """^^rdf:XMLLiteral .
 
+dco:Team
+      a       owl:Class ;
+      rdfs:label "DCO Team"@en-US ;
+      rdfs:subClassOf dco:Object , core:Team ;
+      rdfs:comment  """
+      A group of people who are working together on a specific project or task.
+      """^^rdf:XMLLiteral .
+
 dco:Activity
       a       owl:Class ;
       rdfs:label "Activity"@en-US ;
