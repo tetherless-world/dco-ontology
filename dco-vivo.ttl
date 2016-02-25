@@ -1258,7 +1258,7 @@ dco:altitude
       vitro:publicDescriptionAnnot
               "Altitude (above ground) of physical location (meters)"^^xsd:string .
 
-dco:refersToInstrument
+dco:updateRefersTo
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:displayRankAnnot
