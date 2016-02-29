@@ -549,12 +549,20 @@ dco:forProjectUpdate
 
 dco:referencedByUpdate
       a       owl:ObjectProperty ;
-      rdfs:domain obo:ERO_0000004 ;
       rdfs:label "Referenced By Update"@en-US ;
       rdfs:range dco:ProjectUpdate ;
-      owl:inverseOf dco:refersToInstrument ;
+      owl:inverseOf dco:updateRefersTo ;
       rdfs:comment  """
       Something that is referenced from within project update information during a specific reporting year.
+      """^^rdf:XMLLiteral .
+
+dco:updateRefersTo
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:ProjectUpdate ;
+      rdfs:label "refers to"@en-US ;
+      owl:inverseOf dco:referencedByUpdate ;
+      rdfs:comment  """
+      An entity, such as an instrument, that is used by a project and referenced in a project update.
       """^^rdf:XMLLiteral .
 
 dco:associatedPublication
@@ -565,16 +573,6 @@ dco:associatedPublication
       rdfs:subPropertyOf owl:topObjectProperty ;
       rdfs:comment  """
       A publication referenced by a project update during a specific reporting year.
-      """^^rdf:XMLLiteral .
-
-dco:refersToInstrument
-      a       owl:ObjectProperty ;
-      rdfs:domain dco:ProjectUpdate ;
-      rdfs:label "Refers to Instrument"@en-US ;
-      rdfs:range obo:ERO_0000004 ;
-      owl:inverseOf dco:referencedByUpdate ;
-      rdfs:comment  """
-      An instrument, such as a satellite, that is used by a project and referenced in a project update.
       """^^rdf:XMLLiteral .
 
 ##### Field Studies
@@ -1015,6 +1013,14 @@ dco:ResearchCommunity
       domain.
       """^^rdf:XMLLiteral .
 
+dco:Team
+      a       owl:Class ;
+      rdfs:label "DCO Team"@en-US ;
+      rdfs:subClassOf dco:Object , core:Team ;
+      rdfs:comment  """
+      A group of people who are working together on a specific project or task.
+      """^^rdf:XMLLiteral .
+
 dco:Activity
       a       owl:Class ;
       rdfs:label "Activity"@en-US ;
@@ -1057,11 +1063,20 @@ dco:ResearchAdvisoryCommittee
 
 dco:associatedDCOCommunity
       a       owl:ObjectProperty ;
-      rdfs:label "associated DCO community"@en-US ;
+      rdfs:label "associated DCO Community"@en-US ;
       rdfs:range dco:ResearchCommunity ;
       rdfs:comment  """
       Relates a research community to an entity such as a publication or
       dataset.
+      """^^rdf:XMLLiteral .
+
+dco:associatedDCOTeam
+      a       owl:ObjectProperty ;
+      rdfs:label "associated DCO Team"@en-US ;
+      rdfs:range dco:Team ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:comment  """
+      Relates a group of people working together on a common task
       """^^rdf:XMLLiteral .
 
 dco:relatedOrganization
@@ -1202,9 +1217,138 @@ dco:relatedDataset
       """^^rdf:XMLLiteral .
 
 ##### Instruments
+dco:InstrumentInitiative
+      a       owl:Class ;
+      rdfs:subClassOf dco:Object ;
+      rdfs:label "Instrument Initiative"@en-US ;
+      rdfs:comment  """
+      Activities related to the design and construction of instruments for the Deep Carbon Observatory
+      """^^rdf:XMLLiteral ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom owl:Thing ;
+                owl:onProperty core:hasSubjectArea
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:ResearchCommunity ;
+                owl:onProperty dco:associatedDCOCommunity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:int ;
+                owl:onProperty dco:importance
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:cardinality "1"^^xsd:int ;
+                owl:onProperty dco:importance
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty obo:ARG_2000028 ;
+                owl:someValuesFrom vcard:Individual
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom bibo:Document ;
+                owl:onProperty dco:associatedPublication
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:Team ;
+                owl:onProperty dco:associatedDCOTeam
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty obo:ARG_2000028 ;
+                owl:someValuesFrom vcard:Individual
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty dco:instrInitiativeNews ;
+                owl:someValuesFrom vcard:Individual
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty core:description
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty dco:instrInitiativeNews ;
+                owl:someValuesFrom vcard:Individual
+              ] .
+
+dco:InstrumentDesign
+      a       owl:Class ;
+      rdfs:subClassOf dco:Object ;
+      rdfs:label "Instrument Design"@en-US ;
+      rdfs:comment  """
+      The activity of designing a physical piece of equipment
+      """^^rdf:XMLLiteral ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:ResearchCommunity ;
+                owl:onProperty dco:associatedDCOCommunity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:Team ;
+                owl:onProperty dco:associatedDCOTeam
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:ProjectUpdate ;
+                owl:onProperty dco:referencedByUpdate
+              ] .
+
+dco:Instrument
+      a       owl:Class ;
+      rdfs:subClassOf obo:ERO_0000004 ;
+      rdfs:label "DCO Instrument"@en-US ;
+      rdfs:comment  """
+      a tool or device designed to do careful and exact work
+      """^^rdf:XMLLiteral ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom core:Grant ;
+                owl:onProperty core:hasFundingVehicle
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:ProjectUpdate ;
+                owl:onProperty dco:referencedByUpdate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom bibo:Document ;
+                owl:onProperty obo:ERO_0000460
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:PointOfContact ;
+                owl:onProperty dco:hasPointOfContact
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty core:description
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:Team ;
+                owl:onProperty dco:associatedDCOTeam
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:ResearchCommunity ;
+                owl:onProperty dco:associatedDCOCommunity
+              ] .
+
 dco:instrumentUsedBy
       a       owl:ObjectProperty ;
-      rdfs:domain obo:ERO_0000004 ;
+      rdfs:domain dco:Instrument ;
       rdfs:label "Instrument used in (e.g. project)"@en-US ;
       rdfs:range vivo:Project ;
       owl:inverseOf dco:usesInstrument ;
@@ -1213,11 +1357,22 @@ dco:instrumentUsedBy
       collect information related to the goal of the project.
       """^^rdf:XMLLiteral .
 
+dco:usesInstrument
+      a       owl:ObjectProperty ;
+      rdfs:domain vivo:Project ;
+      rdfs:label "Has instrument"@en-US ;
+      rdfs:range dco:Instrument ;
+      owl:inverseOf dco:instrumentUsedBy ;
+      rdfs:comment  """
+      Relates an instrument to a project that uses the instrument to
+      collect data or information.
+      """^^rdf:XMLLiteral .
+
 dco:createdInstrument
       a       owl:ObjectProperty ;
       rdfs:domain vivo:Project ;
       rdfs:label "Created Instrument"@en-US ;
-      rdfs:range obo:ERO_0000004 ;
+      rdfs:range dco:Instrument ;
       owl:inverseOf dco:instrumentCreatedBy ;
       rdfs:comment  """
       Associates an instrument with the project that funded the design
@@ -1226,7 +1381,7 @@ dco:createdInstrument
 
 dco:instrumentCreatedBy
       a       owl:ObjectProperty ;
-      rdfs:domain obo:ERO_0000004 ;
+      rdfs:domain dco:Instrument ;
       rdfs:label "Instrument Created By"@en-US ;
       rdfs:range vivo:Project ;
       owl:inverseOf dco:createdInstrument ;
@@ -1235,16 +1390,126 @@ dco:instrumentCreatedBy
       part of the project.
       """^^rdf:XMLLiteral .
 
-dco:usesInstrument
+dco:builtDuringInitiative
       a       owl:ObjectProperty ;
-      rdfs:domain vivo:Project ;
-      rdfs:label "Has instrument"@en-US ;
-      rdfs:range obo:ERO_0000004 ;
-      owl:inverseOf dco:instrumentUsedBy ;
+      rdfs:domain dco:Instrument ;
+      rdfs:label "built during initiative"@en-US ;
+      rdfs:range dco:InstrumentInitiative ;
       rdfs:comment  """
-      Relates an instrument to a project that uses the instrument to
-      collect data or information.
-      """^^rdf:XMLLiteral .
+      The physical device (Instrument) was constructed during a particular activity
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:builtInstrument .
+
+dco:builtInstrument
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:InstrumentInitiative ;
+      rdfs:label "built Instrument"@en-US ;
+      rdfs:range dco:Instrument ;
+      rdfs:comment  """
+      The physical device (Instrument) was built during a particular activity
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:builtDuringInitiative .
+
+dco:instrInitiativeNews
+      a       owl:ObjectProperty ;
+      rdfs:label "Related News Article"@en-US ;
+      rdfs:comment  """
+      links to news articles that report on the activities of designing and/or building an instrument
+      """^^rdf:XMLLiteral ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+dco:designedDuringInitiative
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:InstrumentDesign ;
+      rdfs:label "designed during Initiative"@en-US ;
+      rdfs:range dco:InstrumentInitiative ;
+      rdfs:comment  """
+      The physical device (Instrument) was designed during a specific activity
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:designedInstrument .
+
+dco:designedInstrument
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:InstrumentInitiative ;
+      rdfs:label "designed Instrument"@en-US ;
+      rdfs:range dco:InstrumentDesign ;
+      rdfs:comment  """
+      The physical device (Instrument) was designed during a specific activity
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:designedDuringInitiative .
+
+dco:ofInstrumentDesign
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:Instrument ;
+      rdfs:label "of Instrument Design"@en-US ;
+      rdfs:range dco:InstrumentDesign ;
+      rdfs:comment  """
+      The physical device (Instrument) was designed by the design activity
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:instrumentBuilt .
+
+dco:instrumentBuilt
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:InstrumentDesign ;
+      rdfs:label "instrument Built"@en-US ;
+      rdfs:range dco:Instrument ;
+      rdfs:comment  """
+      The manifestation of a physical device (Instrument) given a design
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:ofInstrumentDesign .
+
+dco:PointOfContact
+      a       owl:Class ;
+      rdfs:label "Point of Contact"@en-US ;
+      rdfs:comment  """
+      The agent that is to be contacted for information related to a particular entity
+      """^^rdf:XMLLiteral ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty core:description
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom core:DateTimeInterval ;
+                owl:onProperty core:dateTimeInterval
+              ] .
+
+dco:hasPointOfContact
+      a       owl:ObjectProperty ;
+      rdfs:label "point of contact"@en-US ;
+      rdfs:comment  """
+      Any information related to a particular entity can be gathered by contacting a particular agent
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:pointOfContactFor ;
+      rdfs:range dco:PointOfContact .
+
+dco:pointOfContactFor
+      a       owl:ObjectProperty ;
+      rdfs:label "point of contact for"@en-US ;
+      rdfs:comment  """
+      The agent is a contact for a particular entity
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dco:hasPointOfContact ;
+      rdfs:domain dco:PointOfContact .
+
+dco:hasContact
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:PointOfContact ;
+      rdfs:label "contact"@en-US ;
+      rdfs:comment  """
+      The Agent to be contacted
+      """^^rdf:XMLLiteral ;
+      rdfs:range foaf:Agent .
+
+dco:hasContactInformation
+      a       owl:DatatypeProperty ;
+      rdfs:domain dco:PointOfContact ;
+      rdfs:label "contact information"@en-US ;
+      rdfs:comment  """
+      The inforamtion to be used to contact the Agent, such as email address
+      """^^rdf:XMLLiteral ;
+      rdfs:range xsd:string .
 
 ##### Misc
 dco:hasLongitude
@@ -1346,4 +1611,12 @@ dco:projectLink
       A link pointing to a page or site that describes and contains
       information about a project.
       """^^rdf:XMLLiteral .
+
+dco:importance
+      a       owl:DatatypeProperty ;
+      rdfs:label "importance"@en-US ;
+      rdfs:comment """
+      A helper property to help determine the importance of something to display on a page
+      """^^rdf:XMLLiteral ;
+      rdfs:range xsd:int .
 
