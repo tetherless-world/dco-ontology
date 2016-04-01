@@ -1620,3 +1620,14 @@ dco:importance
       """^^rdf:XMLLiteral ;
       rdfs:range xsd:int .
 
+##### Repository
+dco:Repository
+      a       owl:Class ;
+      rdfs:label "Repository"@en-US ;
+      rdfs:subClassOf owl:Thing;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
