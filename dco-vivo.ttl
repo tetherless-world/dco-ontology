@@ -12,6 +12,7 @@
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix ero:     <http://purl.obolibrary.org/obo/> .
 
 dco:ProjectUpdateModificationNote
       obo:IAO_0000112 "Project Update DCO-DS Q1 FY2015 is modified by Professor Fox on 2015-02-12"^^xsd:string ;
