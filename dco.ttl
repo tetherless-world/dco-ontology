@@ -12,6 +12,7 @@
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
 
 ##### Ontology
 <http://info.deepcarbon.net/schema>
@@ -23,6 +24,8 @@
       dc:contributor <http://tw.rpi.edu/instances/StephanZednik> ;
       dc:contributor <http://tw.rpi.edu/instances/XiaogangMa> ;
       dc:contributor <http://tw.rpi.edu/instances/PeterFox> ;
+      dc:contributor <http://tw.rpi.edu/instances/person/HaoZhong> ;
+      dc:contributor <http://tw.rpi.edu/instances/person/AhmedEleish> ;
       dc:publisher <http://tw.rpi.edu/instances/TetherlessWorldConstellation> ;
       dc:date "2015-11-08"^^xsd:date ;
       dc:rights "This ontology is distributed under a Creative Commons Attribution License http://creativecommons.org/licenses/by/3.0/"@en-US;
@@ -802,17 +805,17 @@ dco:Repository
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom core:GeographicLocation ;
-                owl:onProperty ero:RO_0001025
+                owl:allValuesFrom vivo:GeographicLocation ;
+                owl:onProperty obo:RO_0001025
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom core:Grant ;
-                owl:onProperty core:hasFundingVehicle
+                owl:allValuesFrom vivo:Grant ;
+                owl:onProperty vivo:hasFundingVehicle
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom core:Project ;
+                owl:allValuesFrom vivo:Project ;
                 owl:onProperty dco:relatedProject
               ] ;
       rdfs:subClassOf
@@ -823,7 +826,7 @@ dco:Repository
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -998,7 +1001,7 @@ dco:ResearchCommunity
 dco:Team
       a       owl:Class ;
       rdfs:label "DCO Team"@en-US ;
-      rdfs:subClassOf dco:Object , core:Team ;
+      rdfs:subClassOf dco:Object , vivo:Team ;
       rdfs:comment  """
       A group of people who are working together on a specific project or task.
       """^^rdf:XMLLiteral .
@@ -1209,7 +1212,7 @@ dco:InstrumentInitiative
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom owl:Thing ;
-                owl:onProperty core:hasSubjectArea
+                owl:onProperty vivo:hasSubjectArea
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1254,7 +1257,7 @@ dco:InstrumentInitiative
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1294,8 +1297,8 @@ dco:Instrument
       """^^rdf:XMLLiteral ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom core:Grant ;
-                owl:onProperty core:hasFundingVehicle
+                owl:allValuesFrom vivo:Grant ;
+                owl:onProperty vivo:hasFundingVehicle
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1315,7 +1318,7 @@ dco:Instrument
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1449,12 +1452,12 @@ dco:PointOfContact
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom core:DateTimeInterval ;
-                owl:onProperty core:dateTimeInterval
+                owl:allValuesFrom vivo:DateTimeInterval ;
+                owl:onProperty vivo:dateTimeInterval
               ] .
 
 dco:hasPointOfContact
@@ -1525,7 +1528,7 @@ dco:hasElevation
 dco:relatedProject
       a       owl:ObjectProperty ;
       rdfs:label "related projects"@en-US ;
-      rdfs:range core:Project ;
+      rdfs:range vivo:Project ;
       rdfs:comment  """
       Something that is related to a project
       """^^rdf:XMLLiteral .
