@@ -1,0 +1,79 @@
+@prefix sam:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
+@prefix vivo:    <http://vivoweb.org/ontology/core#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix ero:     <http://purl.obolibrary.org/obo/> .
+
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling>
+      a       owl:Ontology ;
+      rdfs:label "O&M Sampling"@en-US ;
+      dc:title "OWL representation of ISO 19156 Sampling Features model"^^xsd:string ;
+      dc:creator """Simon Jonathan David COX
+CSIRO"""^^rdf:PlainLiteral ;
+      dc:description "An OWL representation of the Sampling Features Schema described in clauses 8-10 of ISO 19156:2011 Geographic Information - Observations and Measurements"^^xsd:string ;
+      dc:source "ISO 19156:2011"^^xsd:string ;
+      dct:created "2012-01-19T00:00:00"^^xsd:dateTime ;
+      dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+      dct:modified "2013-11-14T00:00:00"^^xsd:dateTime .
+
+sam:Location
+      a       owl:Class ;
+      rdfs:label "Location"@en-US ;
+      rdfs:comment  """
+          Location, expressed as either a geometry object or feature
+      """^^rdf:XMLLiteral .
+
+sam:samplingTime
+      a       owl:DatatypeProperty ;
+      rdfs:domain sam:Specimen ;
+      rdfs:label "sampling time"@en-US ;
+      rdfs:range xsd:dateTime ;
+      rdfs:comment  """
+          when the specimen was retrieved from the sampled feature
+      """^^rdf:XMLLiteral .
+
+sam:Process
+      a       owl:Class ;
+      rdfs:label "Sampling Process"@en-US ;
+      rdfs:comment  """
+          AO_0000115 "Agent, device, protocol, or plan involved in sampling. This may include specimen retrieval or processing, surveying a spatial sampling feature, excavation to provide access to a sampling feature, or any other process whose outcome is a new sampling feature
+      """^^rdf:XMLLiteral .
+
+sam:Specimen
+      a       owl:Class ;
+      rdfs:label "Specimen"@en-US ;
+      rdfs:subClassOf sam:SamplingFeature ;
+      rdfs:comment  """
+          a physical sample, obtained for observation(s) normally carried out ex-situ, sometimes in a laboratory.
+      """^^rdf:XMLLiteral .
+
+sam:samplingMethod
+      a       owl:ObjectProperty ;
+      rdfs:domain sam:Specimen ;
+      rdfs:label "sampling method"@en-US ;
+      rdfs:range sam:Process ;
+      rdfs:comment  """
+          Process used to obtain the Specimen from its sampledFeature
+      """^^rdf:XMLLiteral .
+
+sam:SamplingFeature
+      a       owl:Class ;
+      rdfs:label "Sampling Feature"@en-US ;
+      rdfs:comment  """
+          Feature on which observations may be made, which is intended to be representative of a feature that is not fully accessible.
+      """^^rdf:XMLLiteral .
+
+sam:samplingLocation
+      a       owl:ObjectProperty ;
+      rdfs:domain sam:Specimen ;
+      rdfs:label "sampling location"@en-US ;
+      rdfs:range sam:Location ;
+      rdfs:comment  """
+          describe the location from where the specimen was obtained
+      """^^rdf:XMLLiteral .
+

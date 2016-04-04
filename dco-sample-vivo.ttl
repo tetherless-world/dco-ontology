@@ -1,14 +1,18 @@
-@prefix dcosample:  <http://info.deepcarbon.net/sample/schema#> .
-@prefix dco:     <http://info.deepcarbon.net/schema#> .
-@prefix vivo:    <http://vivoweb.org/ontology/core#> .
-@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
-@prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix terms:   <http://purl.org/dc/terms/> .
-@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix sam:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
+@prefix dcosample:  <http://info.deepcarbon.net/sample/schema#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vivo:    <http://vivoweb.org/ontology/core#> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+@prefix dco:     <http://info.deepcarbon.net/schema#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix core:    <http://vivoweb.org/ontology/core#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix ero:     <http://purl.obolibrary.org/obo/> .
 
 <http://info.deepcarbon.net/sample/schema>
@@ -19,7 +23,7 @@ dcosample:inSampleRepository
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:displayRankAnnot
-              "100"^^xsd:int ;
+              "15"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -29,19 +33,22 @@ dcosample:inSampleRepository
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
+              "true"^^xsd:boolean ;
+      owl:inverseOf dcosample:includesSample .
 
-dcosample:sampleCollectionComment
+dcosample:IGSNRegistration
+      ero:IAO_0000115 "information about the registration of an IGSN"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:inClassGroup <http://vivoweb.org/ontology#vitroClassGrouppublications> ;
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:publicDescriptionAnnot
-              "A comment about the collection of a sample at collection time"^^xsd:string .
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dcosample:includesSampleType
       vitro:displayLimitAnnot
@@ -64,6 +71,8 @@ dcosample:includesSampleType
 dcosample:hasSampleType
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -79,27 +88,23 @@ dcosample:hasSampleType
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-dcosample:sampleCollectionTime
+dcosample:hasIGSNRegistration
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:publicDescriptionAnnot
-              "The sample was collected at a specific date and time"^^xsd:string .
-
-dcosample:hasSampleAge
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+              "information about the registration of the sample such as registering, removing the registration, discarding the registration"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
 
 dcosample:includesSampleGroup
       vitro:displayLimitAnnot
@@ -144,34 +149,6 @@ dcosample:Sample
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
-dcosample:IGSN
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:publicDescriptionAnnot
-              "IGSN stands for International Geo Sample Number. The IGSN is 9-character alphanumeric code that uniquely identifies samples taken from our natural environment (for example: rock specimens, water samples, sediment cores) as well as related sampling features (sites, stations, stratigraphic sections, etc.)."^^xsd:string .
-
-dcosample:registeredBy
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:publicDescriptionAnnot
-              "A sample was registered in a repository by someone"^^xsd:string ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
 dcosample:fromSample
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
@@ -187,6 +164,18 @@ dcosample:fromSample
               "a physical sample that comes from a larger sample, such as a slice of a core sample"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
+
+dcosample:igsn
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "IGSN stands for International Geo Sample Number. The IGSN is 9-character alphanumeric code that uniquely identifies samples taken from our natural environment (for example: rock specimens, water samples, sediment cores) as well as related sampling features (sites, stations, stratigraphic sections, etc.)."^^xsd:string .
 
 dcosample:SampleType
       ero:IAO_0000115 "vocabulary term representing types of samples"^^xsd:string ;
@@ -220,6 +209,8 @@ dcosample:SampleRepository
 dcosample:sampleFromFieldStudy
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "10"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
@@ -230,22 +221,6 @@ dcosample:sampleFromFieldStudy
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:publicDescriptionAnnot
               "A sample can be collected as part of a DCO funded field study"^^xsd:string ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-dcosample:sampleGeographicArea
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
-      vitro:publicDescriptionAnnot
-              "The area from which a sample is collected"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
@@ -268,4 +243,3 @@ dcosample:includesSample
               "a sample, such as a core sample, that is part of a sample repository"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
-
