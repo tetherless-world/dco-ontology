@@ -98,6 +98,11 @@ dcosample:Sample
                 owl:allValuesFrom xsd:string ;
                 owl:onProperty core:description
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom bibo:Document ;
+                owl:onProperty dco:isCitedBy
+              ] ;
       rdfs:comment  """
           a physical sample, obtained for observation(s)
       """^^rdf:XMLLiteral .

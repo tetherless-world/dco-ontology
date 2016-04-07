@@ -1614,3 +1614,13 @@ dco:hostedByOrganization
       something that is located at an organization or that the organization is responsible for
       """^^rdf:XMLLiteral .
 
+dco:isCitedBy
+      a       owl:ObjectProperty ;
+      rdfs:label "is cited by"@en-US ;
+      owl:inverseOf dco:cites .
+
+dco:cites
+      a       owl:ObjectProperty ;
+      rdfs:label "cites"@en-US ;
+      owl:inverseOf dco:isCitedBy .
+
