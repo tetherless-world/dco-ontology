@@ -115,6 +115,8 @@ dcosample:includesSampleGroup
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
       vitro:publicDescriptionAnnot
               "a sample repository can include collections of samples as well as individual samples"^^xsd:string ;
       vitro:selectFromExistingAnnot
