@@ -1527,10 +1527,10 @@ dco:hasElevation
 
 dco:relatedProject
       a       owl:ObjectProperty ;
-      rdfs:label "related projects"@en-US ;
+      rdfs:label "related project"@en-US ;
       rdfs:range vivo:Project ;
       rdfs:comment  """
-      Something that is related to a project
+      An entity that is related to a DCO funded project
       """^^rdf:XMLLiteral .
 
 dco:inLanguage

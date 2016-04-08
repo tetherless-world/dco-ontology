@@ -1854,6 +1854,8 @@ dco:Repository
 dco:isCitedBy
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "40"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:hiddenFromPublishBelowRoleLevelAnnot
