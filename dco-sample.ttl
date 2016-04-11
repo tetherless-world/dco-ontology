@@ -15,6 +15,7 @@
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix ero:     <http://purl.obolibrary.org/obo/> .
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
 
 <http://info.deepcarbon.net/sample/schema>
       a       owl:Ontology ;
@@ -33,6 +34,15 @@ dcosample:IGSNRegistration
       rdfs:label "IGSN Registration"@en-US ;
       rdfs:comment  """
           information about the registration of an IGSN
+      """^^rdf:XMLLiteral .
+
+dcosample:igsnRegistrant
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:IGSNRegistration ;
+      rdfs:label "registered by"@en-US ;
+      rdfs:range foaf:Person ;
+      rdfs:comment  """
+          registration of the sample to get igsn was done by a person
       """^^rdf:XMLLiteral .
 
 dcosample:includesSampleType

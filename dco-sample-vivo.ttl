@@ -245,3 +245,21 @@ dcosample:includesSample
               "a sample, such as a core sample, that is part of a sample repository"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
+
+dcosample:igsnRegistrant
+      ero:IAO_0000112 "The Nile Delta core sample 12345/dco-registration was registered by Patrick West"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "A sample is registered with IGSN by a specific person"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
