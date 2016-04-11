@@ -30,7 +30,7 @@ CSIRO"""^^rdf:PlainLiteral ;
   rdfs:comment """An OWL representation of the Sampling Features Schema described in clauses 9-11 of ISO 19156:2011 Geographic Information - Observations and Measurements. 
 In contrast to previous versions developed through SSN and in conjunction with ISO 19150-2, this ontology has minimal dependencies on existing ontologies, particularly those that trigger extended chains of imports. Stub classes are provided for time, geometry and measure (scaled number), which can be substituted at run-time by a suitable concrete representation of the concept. 
 The model for Specimen has a dependency on W3C PROV-O. Specimen is modelled as a subclass of prov:Entity, so PROV can be used to describe specimen preparation chains. """^^xsd:string ;
-  rdfs:label "OWL for Sampling Features"^^xsd:string ;
+  rdfs:label "Sampling Features"^^xsd:string ;
   owl:priorVersion <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> ;
   skos:changeNote "2015-08-18 Added samfl:SamplingCollection class to domain of samfl:sampledFeature"^^xsd:string ;
   skos:changeNote "2015-08-27 Added samfl:materialClass property, rdfs:domain samfl:Specimen"^^xsd:string ;

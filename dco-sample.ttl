@@ -71,7 +71,18 @@ dcosample:hasIGSNRegistration
       rdfs:range dcosample:IGSNRegistration ;
       rdfs:comment  """
           information about the registration of the sample such as registering, removing the registration, discarding the registration
-      """^^rdf:XMLLiteral .
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:registrationForSample .
+
+dcosample:registrationForSample
+      a       owl:ObjectProperty ;
+      rdfs:range samfl:Specimen ;
+      rdfs:label "registration for sample"@en-US ;
+      rdfs:domain dcosample:IGSNRegistration ;
+      rdfs:comment  """
+          The registration of the IGSN is for a given sample
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:hasIGSNRegistration .
 
 dcosample:includesSampleGroup
       a       owl:ObjectProperty ;
@@ -86,6 +97,7 @@ dcosample:SampleGroup
       a       owl:Class ;
       rdfs:label "Sample Group"@en-US ;
       rdfs:subClassOf dco:Object ;
+      rdfs:subClassOf samfl:SamplingCollection ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom dcosample:Sample ;

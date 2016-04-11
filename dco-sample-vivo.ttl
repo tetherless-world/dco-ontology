@@ -106,6 +106,24 @@ dcosample:hasIGSNRegistration
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
+dcosample:registrationForSample
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "false"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:publicDescriptionAnnot
+              "registration of the IGSN is for a sample"^^xsd:string ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
 dcosample:includesSampleGroup
       vitro:displayLimitAnnot
               "5"^^xsd:int ;

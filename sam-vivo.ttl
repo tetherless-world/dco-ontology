@@ -5,7 +5,7 @@
 
 <http://def.seegrid.csiro.au/ontology/om/sam-lite>
       vitro:ontologyPrefixAnnot
-              "sam"^^xsd:string .
+              "samfl"^^xsd:string .
 
 samfl:relatedSamplingFeature
       vitro:displayLimitAnnot
