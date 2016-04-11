@@ -1,4 +1,4 @@
-@prefix sam:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
+@prefix samfl:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix ero:     <http://purl.obolibrary.org/obo/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
@@ -7,7 +7,7 @@
       vitro:ontologyPrefixAnnot
               "sam"^^xsd:string .
 
-sam:samplingFeatureComplex
+samfl:relatedSamplingFeature
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -19,7 +19,7 @@ sam:samplingFeatureComplex
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:relatedSamplingFeature
+samfl:materialClass
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -31,43 +31,7 @@ sam:relatedSamplingFeature
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:relatedObservation
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:materialClass
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:processOperator
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:samplingTime
+samfl:samplingTime
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:displayRankAnnot
@@ -83,7 +47,7 @@ sam:samplingTime
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:role
+samfl:role
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -95,7 +59,7 @@ sam:role
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:preparationStep
+samfl:sampledFeature
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -107,19 +71,7 @@ sam:preparationStep
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:sampledFeature
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:samplingMethod
+samfl:samplingMethod
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:displayRankAnnot
@@ -135,31 +87,7 @@ sam:samplingMethod
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:lineage
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:positionalAccuracy
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:size
+samfl:size
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -172,7 +100,7 @@ sam:size
               "true"^^xsd:boolean .
 
 
-sam:shape
+samfl:shape
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -184,7 +112,7 @@ sam:shape
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:samplingLocation
+samfl:samplingLocation
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:displayRankAnnot
@@ -200,7 +128,7 @@ sam:samplingLocation
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:member
+samfl:member
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -212,7 +140,7 @@ sam:member
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:hostedProcedure
+samfl:hostedProcedure
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -224,55 +152,7 @@ sam:hostedProcedure
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-sam:specimenType
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:currentLocation
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:processingDetails
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:parameter
-      vitro:displayLimitAnnot
-              "5"^^xsd:int ;
-      vitro:hiddenFromDisplayBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:hiddenFromPublishBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
-              <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
-      vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean .
-
-sam:time
+samfl:currentLocation
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot

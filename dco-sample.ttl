@@ -1,5 +1,5 @@
 @prefix terms:   <http://purl.org/dc/terms/> .
-@prefix sam:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
+@prefix samfl:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
 @prefix dcosample:  <http://info.deepcarbon.net/sample/schema#> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -56,7 +56,7 @@ dcosample:hasSampleType
 
 dcosample:hasIGSNRegistration
       a       owl:ObjectProperty ;
-      rdfs:domain sam:Specimen ;
+      rdfs:domain samfl:Specimen ;
       rdfs:label "has IGSN registration"@en-US ;
       rdfs:range dcosample:IGSNRegistration ;
       rdfs:comment  """
@@ -88,7 +88,7 @@ dcosample:SampleGroup
 dcosample:Sample
       a       owl:Class ;
       rdfs:label "Sample"@en-US ;
-      rdfs:subClassOf dco:Object , sam:Specimen ;
+      rdfs:subClassOf dco:Object , samfl:Specimen ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom dco:Object ;

@@ -1,5 +1,5 @@
 @prefix terms:   <http://purl.org/dc/terms/> .
-@prefix sam:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
+@prefix samfl:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
 @prefix dcosample:  <http://info.deepcarbon.net/sample/schema#> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
