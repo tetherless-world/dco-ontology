@@ -1,6 +1,4 @@
 # baseURI: http://def.seegrid.csiro.au/ontology/om/sam-lite
-# imports: http://purl.org/dc/elements/1.1/
-# imports: http://www.w3.org/ns/prov
 
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -33,8 +31,6 @@ CSIRO"""^^rdf:PlainLiteral ;
 In contrast to previous versions developed through SSN and in conjunction with ISO 19150-2, this ontology has minimal dependencies on existing ontologies, particularly those that trigger extended chains of imports. Stub classes are provided for time, geometry and measure (scaled number), which can be substituted at run-time by a suitable concrete representation of the concept. 
 The model for Specimen has a dependency on W3C PROV-O. Specimen is modelled as a subclass of prov:Entity, so PROV can be used to describe specimen preparation chains. """^^xsd:string ;
   rdfs:label "OWL for Sampling Features"^^xsd:string ;
-  owl:imports dc: ;
-  owl:imports <http://www.w3.org/ns/prov> ;
   owl:priorVersion <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> ;
   skos:changeNote "2015-08-18 Added samfl:SamplingCollection class to domain of samfl:sampledFeature"^^xsd:string ;
   skos:changeNote "2015-08-27 Added samfl:materialClass property, rdfs:domain samfl:Specimen"^^xsd:string ;

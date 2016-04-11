@@ -1,9 +1,9 @@
-@prefix samfl:     <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#> .
+@prefix samfl:     <http://def.seegrid.csiro.au/ontology/om/sam-lite#> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix ero:     <http://purl.obolibrary.org/obo/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling>
+<http://def.seegrid.csiro.au/ontology/om/sam-lite>
       vitro:ontologyPrefixAnnot
               "sam"^^xsd:string .
 
