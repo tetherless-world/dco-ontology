@@ -137,6 +137,24 @@ dcosample:includesSampleGroup
               <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
       vitro:publicDescriptionAnnot
               "a sample repository can include collections of samples as well as individual samples"^^xsd:string ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dcosample:sampleGroupInRepository
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:publicDescriptionAnnot
+              "A collection of samples is kept in a sample repository"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 

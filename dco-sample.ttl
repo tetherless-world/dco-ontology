@@ -91,7 +91,18 @@ dcosample:includesSampleGroup
       rdfs:range dcosample:SampleGroup ;
       rdfs:comment  """
           a sample repository can include collections of samples as well as individual samples
-      """^^rdf:XMLLiteral .
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:sampleGroupInRepository .
+
+dcosample:sampleGroupInRepository
+      a       owl:ObjectProperty ;
+      rdfs:range dcosample:SampleRepository ;
+      rdfs:label "sample group in"@en-US ;
+      rdfs:domain dcosample:SampleGroup ;
+      rdfs:comment  """
+          a collection of samples is in a sample repository
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:includesSampleGroup .
 
 dcosample:SampleGroup
       a       owl:Class ;
