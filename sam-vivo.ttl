@@ -47,6 +47,22 @@ samfl:samplingTime
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
+samfl:member
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "20"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
 samfl:role
       vitro:displayLimitAnnot
               "5"^^xsd:int ;

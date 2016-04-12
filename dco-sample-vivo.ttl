@@ -33,8 +33,7 @@ dcosample:inSampleRepository
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:selectFromExistingAnnot
-              "true"^^xsd:boolean ;
-      owl:inverseOf dcosample:includesSample .
+              "true"^^xsd:boolean .
 
 dcosample:IGSNRegistration
       ero:IAO_0000115 "information about the registration of an IGSN"^^xsd:string ;
@@ -299,3 +298,20 @@ dcosample:igsnRegistrant
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
+dcosample:isMemberOf
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "15"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+      

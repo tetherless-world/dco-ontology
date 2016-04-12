@@ -1,11 +1,10 @@
-@prefix terms:   <http://purl.org/dc/terms/> .
 @prefix samfl:     <http://def.seegrid.csiro.au/ontology/om/sam-lite#> .
 @prefix dcosample:  <http://info.deepcarbon.net/sample/schema#> .
 @prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dc:      <http://purl.org/dc/elements/1.1/> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vivo:    <http://vivoweb.org/ontology/core#> .
 @prefix obo:     <http://purl.obolibrary.org/obo/> .
@@ -20,14 +19,6 @@
 <http://info.deepcarbon.net/sample/schema>
       a       owl:Ontology ;
       rdfs:label "DCO Sample"@en-US .
-
-dcosample:inSampleRepository
-      a       owl:ObjectProperty ;
-      rdfs:domain dcosample:Sample ;
-      rdfs:label "in sample repository"@en-US ;
-      rdfs:range dcosample:SampleRepository ;
-      rdfs:comment  """
-      """^^rdf:XMLLiteral .
 
 dcosample:IGSNRegistration
       a       owl:Class ;
@@ -89,6 +80,7 @@ dcosample:includesSampleGroup
       rdfs:domain dcosample:SampleRepository ;
       rdfs:label "includes sample group"@en-US ;
       rdfs:range dcosample:SampleGroup ;
+      rdfs:subPropertyOf core:hasPart ;
       rdfs:comment  """
           a sample repository can include collections of samples as well as individual samples
       """^^rdf:XMLLiteral ;
@@ -99,6 +91,7 @@ dcosample:sampleGroupInRepository
       rdfs:range dcosample:SampleRepository ;
       rdfs:label "sample group in"@en-US ;
       rdfs:domain dcosample:SampleGroup ;
+      rdfs:subPropertyOf core:isPartOf ;
       rdfs:comment  """
           a collection of samples is in a sample repository
       """^^rdf:XMLLiteral ;
@@ -125,7 +118,7 @@ dcosample:Sample
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom dco:Object ;
-                owl:onProperty dcterms:isReferencedBy
+                owl:onProperty dct:isReferencedBy
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -200,8 +193,29 @@ dcosample:includesSample
       rdfs:domain dcosample:SampleRepository ;
       rdfs:label "includes sample"@en-US ;
       rdfs:range dcosample:Sample ;
+      rdfs:subPropertyOf core:hasPart ;
       rdfs:comment  """
           a sample, such as a core sample, that is part of a sample repository
       """^^rdf:XMLLiteral ;
       owl:inverseOf dcosample:inSampleRepository .
+
+dcosample:inSampleRepository
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:Sample ;
+      rdfs:label "in sample repository"@en-US ;
+      rdfs:range dcosample:SampleRepository ;
+      rdfs:subPropertyOf core:isPartOf ;
+      rdfs:comment  """
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:includesSample .
+
+dcosample:isMemberOf
+      a       owl:ObjectProperty ;
+      rdfs:domain samfl:SamplingFeature ;
+      rdfs:label "member of" ;
+      rdfs:range samfl:SamplingCollection ;
+      rdfs:comment """
+          the sampling feature is a member of a sampling collection
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf samfl:member .
 
