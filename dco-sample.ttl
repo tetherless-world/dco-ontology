@@ -169,6 +169,15 @@ dcosample:SampleRepository
           A repository where samples are maintained
       """^^rdf:XMLLiteral .
 
+dcosample:sampleCurationPractice
+      a       owl:DatatypeProperty ;
+      rdfs:domain dcosample:SampleRepository ;
+      rdfs:label "sample curation practice"@en-US ;
+      rdfs:comment  """
+          the curation practice employed for the sample repository
+      """^^rdf:XMLLiteral ;
+      rdfs:range rdf:XMLLiteral .
+
 dcosample:sampleFromFieldStudy
       a       owl:ObjectProperty ;
       rdfs:domain dcosample:Sample ;
