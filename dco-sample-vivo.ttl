@@ -102,11 +102,11 @@ dcosample:hasIGSNRegistration
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:publicDescriptionAnnot
-              "information about the registration of the sample such as registering, removing the registration, discarding the registration"^^xsd:string ;
+              "information about the registration of the sampling feature such as registering, removing the registration, discarding the registration"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 
-dcosample:registrationForSample
+dcosample:registrationForSamplingFeature
       vitro:displayLimitAnnot
               "5"^^xsd:int ;
       vitro:hiddenFromDisplayBelowRoleLevelAnnot
@@ -120,7 +120,7 @@ dcosample:registrationForSample
       vitro:prohibitedFromUpdateBelowRoleLevelAnnot
               <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
       vitro:publicDescriptionAnnot
-              "registration of the IGSN is for a sample"^^xsd:string ;
+              "registration of the IGSN is for a sampling feature"^^xsd:string ;
       vitro:selectFromExistingAnnot
               "true"^^xsd:boolean .
 

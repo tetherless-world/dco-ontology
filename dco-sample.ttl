@@ -66,21 +66,21 @@ dcosample:hasSampleType
 
 dcosample:hasIGSNRegistration
       a       owl:ObjectProperty ;
-      rdfs:domain samfl:Specimen ;
+      rdfs:domain samfl:SamplingFeature ;
       rdfs:label "has IGSN registration"@en-US ;
       rdfs:range dcosample:IGSNRegistration ;
       rdfs:comment  """
-          information about the registration of the sample such as registering, removing the registration, discarding the registration
+          information about the registration of the sampling feature such as registering, removing the registration, discarding the registration
       """^^rdf:XMLLiteral ;
-      owl:inverseOf dcosample:registrationForSample .
+      owl:inverseOf dcosample:registrationForSamplingFeature .
 
-dcosample:registrationForSample
+dcosample:registrationForSamplingFeature
       a       owl:ObjectProperty ;
-      rdfs:range samfl:Specimen ;
+      rdfs:range samfl:SamplingFeature ;
       rdfs:label "registration for sample"@en-US ;
       rdfs:domain dcosample:IGSNRegistration ;
       rdfs:comment  """
-          The registration of the IGSN is for a given sample
+          The registration of the IGSN is for a given sampling feature
       """^^rdf:XMLLiteral ;
       owl:inverseOf dcosample:hasIGSNRegistration .
 
