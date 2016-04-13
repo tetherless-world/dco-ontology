@@ -194,6 +194,7 @@ dcosample:collectedSample
       rdfs:label "collected sample"@en-US ;
       rdfs:range dcosample:Sample ;
       rdfs:comment  """
+      As part of a field study project a sample, such as a core or rock sample, is collected
       """^^rdf:XMLLiteral ;
       owl:inverseOf dcosample:sampleFromFieldStudy .
 
@@ -215,6 +216,7 @@ dcosample:inSampleRepository
       rdfs:range dcosample:SampleRepository ;
       rdfs:subPropertyOf core:isPartOf ;
       rdfs:comment  """
+      A sample, such as a core or rock sample, is included in, or is part of, a sample repository
       """^^rdf:XMLLiteral ;
       owl:inverseOf dcosample:includesSample .
 

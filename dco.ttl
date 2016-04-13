@@ -1617,10 +1617,16 @@ dco:hostedByOrganization
 dco:isCitedBy
       a       owl:ObjectProperty ;
       rdfs:label "is cited by"@en-US ;
-      owl:inverseOf dco:cites .
+      owl:inverseOf dco:cites ;
+      rdfs:comment """
+      A specific reference, such as a quotation or piece of data, is made by another entity
+      """^^rdf:XMLLiteral .
 
 dco:cites
       a       owl:ObjectProperty ;
       rdfs:label "cites"@en-US ;
-      owl:inverseOf dco:isCitedBy .
+      owl:inverseOf dco:isCitedBy ;
+      rdfs:comment """
+      The entity has a specific reference, such as a quotation or dataset, from another entity
+      """^^rdf:XMLLiteral .
 
