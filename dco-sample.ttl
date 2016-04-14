@@ -1,0 +1,232 @@
+@prefix samfl:     <http://def.seegrid.csiro.au/ontology/om/sam-lite#> .
+@prefix dcosample:  <http://info.deepcarbon.net/sample/schema#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vivo:    <http://vivoweb.org/ontology/core#> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+@prefix dco:     <http://info.deepcarbon.net/schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix core:    <http://vivoweb.org/ontology/core#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix ero:     <http://purl.obolibrary.org/obo/> .
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+<http://info.deepcarbon.net/sample/schema>
+      a       owl:Ontology ;
+      rdfs:label "DCO Sample"@en-US .
+
+dcosample:IGSNRegistration
+      a       owl:Class ;
+      rdfs:label "IGSN Registration"@en-US ;
+      rdfs:comment  """
+          information about the registration of an IGSN
+      """^^rdf:XMLLiteral .
+
+dcosample:igsnRegistrant
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:IGSNRegistration ;
+      rdfs:label "registered by"@en-US ;
+      rdfs:range foaf:Person ;
+      rdfs:comment  """
+          registration of the sample to get igsn was done by a person
+      """^^rdf:XMLLiteral .
+
+dcosample:includesSampleType
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:SampleGroup ;
+      rdfs:label "includes sample type"@en-US ;
+      rdfs:range dcosample:SampleType ;
+      rdfs:comment  """
+          A collection of samples includes samples of various types
+      """^^rdf:XMLLiteral .
+
+dcosample:hasSampleType
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:Sample ;
+      rdfs:label "has sample type"@en-US ;
+      rdfs:range dcosample:SampleType ;
+      rdfs:subPropertyOf core:hasSubjectArea ;
+      rdfs:comment  """
+          A sample classification or annotation
+      """^^rdf:XMLLiteral .
+
+dcosample:hasIGSNRegistration
+      a       owl:ObjectProperty ;
+      rdfs:domain samfl:SamplingFeature ;
+      rdfs:label "has IGSN registration"@en-US ;
+      rdfs:range dcosample:IGSNRegistration ;
+      rdfs:comment  """
+          information about the registration of the sampling feature such as registering, removing the registration, discarding the registration
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:registrationForSamplingFeature .
+
+dcosample:registrationForSamplingFeature
+      a       owl:ObjectProperty ;
+      rdfs:range samfl:SamplingFeature ;
+      rdfs:label "registration for sample"@en-US ;
+      rdfs:domain dcosample:IGSNRegistration ;
+      rdfs:comment  """
+          The registration of the IGSN is for a given sampling feature
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:hasIGSNRegistration .
+
+dcosample:includesSampleGroup
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:SampleRepository ;
+      rdfs:label "includes sample group"@en-US ;
+      rdfs:range dcosample:SampleGroup ;
+      rdfs:subPropertyOf core:hasPart ;
+      rdfs:comment  """
+          a sample repository can include collections of samples as well as individual samples
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:sampleGroupInRepository .
+
+dcosample:sampleGroupInRepository
+      a       owl:ObjectProperty ;
+      rdfs:range dcosample:SampleRepository ;
+      rdfs:label "sample group in"@en-US ;
+      rdfs:domain dcosample:SampleGroup ;
+      rdfs:subPropertyOf core:isPartOf ;
+      rdfs:comment  """
+          a collection of samples is in a sample repository
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:includesSampleGroup .
+
+dcosample:SampleGroup
+      a       owl:Class ;
+      rdfs:label "Sample Group"@en-US ;
+      rdfs:subClassOf dco:Object ;
+      rdfs:subClassOf samfl:SamplingCollection ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dcosample:Sample ;
+                owl:onProperty ero:BFO_0000051
+              ] ;
+      rdfs:comment  """
+          A collection of samples usually with common attributes
+      """^^rdf:XMLLiteral .
+
+dcosample:Sample
+      a       owl:Class ;
+      rdfs:label "Sample"@en-US ;
+      rdfs:subClassOf dco:Object , samfl:Specimen ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:Object ;
+                owl:onProperty dct:isReferencedBy
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty core:description
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom bibo:Document ;
+                owl:onProperty dco:isCitedBy
+              ] ;
+      rdfs:comment  """
+          a physical sample, obtained for observation(s)
+      """^^rdf:XMLLiteral .
+
+dcosample:fromSample
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:Sample ;
+      rdfs:label "from sample"@en-US ;
+      rdfs:range dcosample:Sample ;
+      rdfs:comment  """
+          a physical sample that comes from a larger sample, such as a slice of a core sample
+      """^^rdf:XMLLiteral .
+
+dcosample:igsn
+      a       owl:DatatypeProperty ;
+      rdfs:domain dcosample:Sample ;
+      rdfs:label "IGSN"@en-US ;
+      rdfs:range xsd:string ;
+      rdfs:subPropertyOf core:identifier ;
+      rdfs:comment  """
+          IGSN stands for International Geo Sample Number. The IGSN is 9-character alphanumeric code that uniquely identifies samples taken from our natural environment (for example: rock specimens, water samples, sediment cores) as well as related sampling features (sites, stations, stratigraphic sections, etc.).
+      """^^rdf:XMLLiteral .
+
+dcosample:SampleType
+      a       owl:Class ;
+      rdfs:label "Sample Type"@en-US ;
+      rdfs:subClassOf skos:Concept ;
+      rdfs:comment  """
+          vocabulary term representing types of samples
+      """^^rdf:XMLLiteral .
+
+dcosample:SampleRepository
+      a       owl:Class ;
+      rdfs:label "Sample Repository"@en-US ;
+      rdfs:subClassOf dco:Repository ;
+      rdfs:comment  """
+          A repository where samples are maintained
+      """^^rdf:XMLLiteral .
+
+dcosample:sampleCurationPractice
+      a       owl:DatatypeProperty ;
+      rdfs:domain dcosample:SampleRepository ;
+      rdfs:label "sample curation practice"@en-US ;
+      rdfs:comment  """
+          the curation practice employed for the sample repository
+      """^^rdf:XMLLiteral ;
+      rdfs:range rdf:XMLLiteral .
+
+dcosample:sampleFromFieldStudy
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:Sample ;
+      rdfs:label "sample from field study"@en-US ;
+      rdfs:range dco:FieldStudy ;
+      rdfs:comment  """
+          A sample can be collected as part of a DCO funded field study
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:collectedSample .
+
+dcosample:collectedSample
+      a       owl:ObjectProperty ;
+      rdfs:domain dco:FieldStudy ;
+      rdfs:label "collected sample"@en-US ;
+      rdfs:range dcosample:Sample ;
+      rdfs:comment  """
+      As part of a field study project a sample, such as a core or rock sample, is collected
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:sampleFromFieldStudy .
+
+dcosample:includesSample
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:SampleRepository ;
+      rdfs:label "includes sample"@en-US ;
+      rdfs:range dcosample:Sample ;
+      rdfs:subPropertyOf core:hasPart ;
+      rdfs:comment  """
+          a sample, such as a core sample, that is part of a sample repository
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:inSampleRepository .
+
+dcosample:inSampleRepository
+      a       owl:ObjectProperty ;
+      rdfs:domain dcosample:Sample ;
+      rdfs:label "in sample repository"@en-US ;
+      rdfs:range dcosample:SampleRepository ;
+      rdfs:subPropertyOf core:isPartOf ;
+      rdfs:comment  """
+      A sample, such as a core or rock sample, is included in, or is part of, a sample repository
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf dcosample:includesSample .
+
+dcosample:isMemberOf
+      a       owl:ObjectProperty ;
+      rdfs:domain samfl:SamplingFeature ;
+      rdfs:label "member of" ;
+      rdfs:range samfl:SamplingCollection ;
+      rdfs:comment """
+          the sampling feature is a member of a sampling collection
+      """^^rdf:XMLLiteral ;
+      owl:inverseOf samfl:member .
+

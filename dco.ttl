@@ -12,6 +12,7 @@
 @prefix bibo:    <http://purl.org/ontology/bibo/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
 
 ##### Ontology
 <http://info.deepcarbon.net/schema>
@@ -23,6 +24,8 @@
       dc:contributor <http://tw.rpi.edu/instances/StephanZednik> ;
       dc:contributor <http://tw.rpi.edu/instances/XiaogangMa> ;
       dc:contributor <http://tw.rpi.edu/instances/PeterFox> ;
+      dc:contributor <http://tw.rpi.edu/instances/person/HaoZhong> ;
+      dc:contributor <http://tw.rpi.edu/instances/person/AhmedEleish> ;
       dc:publisher <http://tw.rpi.edu/instances/TetherlessWorldConstellation> ;
       dc:date "2015-11-08"^^xsd:date ;
       dc:rights "This ontology is distributed under a Creative Commons Attribution License http://creativecommons.org/licenses/by/3.0/"@en-US;
@@ -790,84 +793,66 @@ dco:vesselName
       A name given to a research vessel. May not be unique.
       """^^rdf:XMLLiteral .
 
-##### Samples
-dco:GeoSample
+##### Repository
+dco:Repository
       a       owl:Class ;
-      rdfs:label "GeoSample"@en-US ;
-      rdfs:subClassOf vivo:InformationResource ;
+      rdfs:label "Repository"@en-US ;
+      rdfs:subClassOf dco:Object ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasElevation
+                owl:allValuesFrom dco:ResearchCommunity ;
+                owl:onProperty dco:associatedDCOCommunity
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasMaterial
+                owl:allValuesFrom vivo:GeographicLocation ;
+                owl:onProperty obo:RO_0001025
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasLongitude
+                owl:allValuesFrom vivo:Grant ;
+                owl:onProperty vivo:hasFundingVehicle
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasLatitude
+                owl:allValuesFrom vivo:Project ;
+                owl:onProperty dco:relatedProject
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Literal ;
-                owl:onProperty dco:hasSampleAge
+                owl:allValuesFrom dco:PointOfContact ;
+                owl:onProperty dco:hasPointOfContact
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty vivo:description
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom foaf:Organization ;
+                owl:onProperty dco:hostedByOrganization
               ] ;
       rdfs:comment  """
-      A specimen or small quantity of a geophysical material.
+      a central location in which data is stored and managed
       """^^rdf:XMLLiteral .
 
-dco:hasGeoSample
-      a       owl:ObjectProperty ;
-      rdfs:domain dco:FieldStudy ;
-      rdfs:label "Has samples"@en-US ;
-      rdfs:range dco:GeoSample ;
-      owl:inverseOf dco:isSampleFor ;
-      rdfs:comment  """
-      Relating a geo sample collected at a physical location to the
-      field study at that location.
-      """^^rdf:XMLLiteral .
-
-dco:isSampleFor
-      a       owl:ObjectProperty ;
-      rdfs:domain dco:GeoSample ;
-      rdfs:label "Is sample for"@en-US ;
-      rdfs:range dco:FieldStudy ;
-      owl:inverseOf dco:hasGeoSample ;
-      rdfs:comment  """
-      Specifies the field study that a geo sample is associated with.
-      """^^rdf:XMLLiteral .
-
-dco:hasMaterial
+dco:repositoryWebsite
       a       owl:DatatypeProperty ;
-      rdfs:label "sample material"@en-US ;
-      rdfs:comment  """
-      The substance that a  geo sample is made up of.
-      """^^rdf:XMLLiteral .
-
-dco:hasSampleAge
-      a       owl:DatatypeProperty ;
-      rdfs:domain dco:GeoSample ;
-      rdfs:label "sample age"@en-US ;
-      rdfs:comment  """
-      The time that a sample was deposited in the earth.
-      """^^rdf:XMLLiteral .
-
-dco:IGSN
-      a       owl:FunctionalProperty , owl:DatatypeProperty ;
-      rdfs:domain dco:GeoSample ;
-      rdfs:label "IGSN"@en-US ;
+      rdfs:domain dco:Repository ;
+      rdfs:label "repository website"@en-US ;
       rdfs:range xsd:anyURI ;
       rdfs:comment  """
-      The International Geo Sample Number is a persistent identifier
-      assigned to a geo sample.
+      A web site that includes information about a repository. Does not represent the online catalog where data can be searched for
+      """^^rdf:XMLLiteral .
+
+dco:repositoryOnlineCatalog
+      a       owl:DatatypeProperty ;
+      rdfs:domain dco:Repository ;
+      rdfs:label "repository online catalog"@en-US ;
+      rdfs:range xsd:anyURI ;
+      rdfs:comment  """
+      a link to the online data store for a repository where data can be searched for
       """^^rdf:XMLLiteral .
 
 ##### DataTypes
@@ -1016,7 +1001,7 @@ dco:ResearchCommunity
 dco:Team
       a       owl:Class ;
       rdfs:label "DCO Team"@en-US ;
-      rdfs:subClassOf dco:Object , core:Team ;
+      rdfs:subClassOf dco:Object , vivo:Team ;
       rdfs:comment  """
       A group of people who are working together on a specific project or task.
       """^^rdf:XMLLiteral .
@@ -1227,7 +1212,7 @@ dco:InstrumentInitiative
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom owl:Thing ;
-                owl:onProperty core:hasSubjectArea
+                owl:onProperty vivo:hasSubjectArea
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1272,7 +1257,7 @@ dco:InstrumentInitiative
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1312,8 +1297,8 @@ dco:Instrument
       """^^rdf:XMLLiteral ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom core:Grant ;
-                owl:onProperty core:hasFundingVehicle
+                owl:allValuesFrom vivo:Grant ;
+                owl:onProperty vivo:hasFundingVehicle
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1333,7 +1318,7 @@ dco:Instrument
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
@@ -1467,12 +1452,12 @@ dco:PointOfContact
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom xsd:string ;
-                owl:onProperty core:description
+                owl:onProperty vivo:description
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom core:DateTimeInterval ;
-                owl:onProperty core:dateTimeInterval
+                owl:allValuesFrom vivo:DateTimeInterval ;
+                owl:onProperty vivo:dateTimeInterval
               ] .
 
 dco:hasPointOfContact
@@ -1542,9 +1527,10 @@ dco:hasElevation
 
 dco:relatedProject
       a       owl:ObjectProperty ;
-      rdfs:label "Related projects or field studies"@en-US ;
+      rdfs:label "related project"@en-US ;
+      rdfs:range vivo:Project ;
       rdfs:comment  """
-      Relates an entity to a project.
+      An entity that is related to a DCO funded project
       """^^rdf:XMLLiteral .
 
 dco:inLanguage
@@ -1619,4 +1605,28 @@ dco:importance
       A helper property to help determine the importance of something to display on a page
       """^^rdf:XMLLiteral ;
       rdfs:range xsd:int .
+
+dco:hostedByOrganization
+      a       owl:ObjectProperty ;
+      rdfs:label "hosted by organization"@en-US ;
+      rdfs:range foaf:Organization ;
+      rdfs:comment """
+      something that is located at an organization or that the organization is responsible for
+      """^^rdf:XMLLiteral .
+
+dco:isCitedBy
+      a       owl:ObjectProperty ;
+      rdfs:label "is cited by"@en-US ;
+      owl:inverseOf dco:cites ;
+      rdfs:comment """
+      A specific reference, such as a quotation or piece of data, is made by another entity
+      """^^rdf:XMLLiteral .
+
+dco:cites
+      a       owl:ObjectProperty ;
+      rdfs:label "cites"@en-US ;
+      owl:inverseOf dco:isCitedBy ;
+      rdfs:comment """
+      The entity has a specific reference, such as a quotation or dataset, from another entity
+      """^^rdf:XMLLiteral .
 
