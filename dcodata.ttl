@@ -1,0 +1,66 @@
+@prefix dco:     <http://info.deepcarbon.net/schema#> .
+@prefix dcodata:  <http://info.deepcarbon.net/data/schema#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix vivo:    <http://vivoweb.org/ontology/core#> .
+
+<http://info.deepcarbon.net/data/schema>
+      a       owl:Ontology ;
+      rdfs:label "DCO Data"@en-US .
+
+dcodata:Dataset
+      a       owl:Class ;
+      rdfs:label "DCO Dataset"@en-US ;
+      rdfs:subClassOf dco:Object , prov:Entity , dcat:Dataset ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:PointOfContact ;
+                owl:onProperty dco:hasPointOfContact
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:ResearchCommunity ;
+                owl:onProperty dco:associatedDCOCommunity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom foaf:Agent ;
+                owl:onProperty dct:publisher
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:Team ;
+                owl:onProperty dco:associatedDCOTeam
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom vivo:Project ;
+                owl:onProperty dco:relatedProject
+              ] ;
+      rdfs:comment  """
+      A collection of data, published or curated by a single agent, and available for access or download in one or more formats
+      """^^rdf:XMLLiteral .
+
+dcodata:Distribution
+      a       owl:Class ;
+      rdfs:label "DCO Distribution"@en-US ;
+      rdfs:subClassOf dco:Object , dcat:Distribution , prov:Entity ;
+      rdfs:comment  """
+      Represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset or different endpoints. Examples of distributions include a downloadable CSV file, an API or an RSS feed
+      """^^rdf:XMLLiteral .
+
+dcodata:DataRepository
+      a       owl:Class ;
+      rdfs:label "Data Repository"@en-US ;
+      rdfs:subClassOf dco:Repository , dcat:Catalog ;
+      rdfs:comment  """
+      a collection of datasets
+      """^^rdf:XMLLiteral .
+

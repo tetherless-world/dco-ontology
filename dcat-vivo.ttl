@@ -1,0 +1,13 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix ero:     <http://purl.obolibrary.org/obo/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+dcat:contactPoint
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
