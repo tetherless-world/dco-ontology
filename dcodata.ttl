@@ -44,6 +44,11 @@ dcodata:Dataset
                 owl:allValuesFrom vivo:Project ;
                 owl:onProperty dco:relatedProject
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dcodata:Distribution ;
+                owl:onProperty dcat:distribution
+              ] ;
       rdfs:comment  """
       A collection of data, published or curated by a single agent, and available for access or download in one or more formats
       """^^rdf:XMLLiteral .
