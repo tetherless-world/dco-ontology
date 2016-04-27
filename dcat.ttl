@@ -15,7 +15,7 @@
 
 <http://www.w3.org/ns/dcat>
     a owl:Ontology, voaf:Vocabulary;
-    rdfs:label "The data catalog vocabulary"@en;
+    rdfs:label "Data catalog vocabulary"@en;
     rdfs:label "El vocabulario de catálogo de datos"@es;
     rdfs:label "أنطولوجية فهارس قوائم البيانات"@ar ;
   	rdfs:label "Το λεξιλόγιο των καταλόγων δεδομένων"@el;
