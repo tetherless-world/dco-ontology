@@ -39,6 +39,30 @@ dcat:bytes
     vitro:prohibitedFromUpdateBelowRoleLevelAnnot
         <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
+dcat:dataDictionary
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:dataQuality
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:granularity
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
 dcat:accessURL
     vitro:displayRankAnnot
             "5"^^xsd:int ;
@@ -54,6 +78,30 @@ dcat:downloadURL
 dcat:mediaType
     vitro:displayRankAnnot
             "30"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+dcat:distribution
+    vitro:displayRankAnnot
+            "5"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+dcat:keyword
+    vitro:displayRankAnnot
+            "13"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+dcat:theme
+    vitro:displayRankAnnot
+            "12"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+dcat:landingPage
+    vitro:displayRankAnnot
+            "35"^^xsd:int ;
     vitro:inPropertyGroupAnnot
             <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 
