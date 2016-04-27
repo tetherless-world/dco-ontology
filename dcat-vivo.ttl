@@ -40,14 +40,20 @@ dcat:bytes
         <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
 
 dcat:accessURL
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+    vitro:displayRankAnnot
+            "5"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 
 dcat:downloadURL
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+    vitro:displayRankAnnot
+            "10"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 
 dcat:mediaType
-      vitro:inPropertyGroupAnnot
-              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+    vitro:displayRankAnnot
+            "30"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
 

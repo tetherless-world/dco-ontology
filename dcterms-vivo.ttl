@@ -15,6 +15,8 @@ dct:contributor
 
 dct:issued
     a       owl:DatatypeProperty ;
+    vitro:displayRankAnnot
+            "15"^^xsd:int ;
     vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupoverview .
 
 dct:title
@@ -31,6 +33,8 @@ dct:identifier
 
 dct:format
     a       owl:ObjectProperty ;
+    vitro:displayRankAnnot
+            "35"^^xsd:int ;
     vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupoverview .
 
 dct:temporal
@@ -47,10 +51,14 @@ dct:accrualPeriodicity
 
 dct:rights
     a       owl:ObjectProperty ;
+    vitro:displayRankAnnot
+            "25"^^xsd:int ;
     vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupoverview .
 
 dct:license
     a       owl:ObjectProperty ;
+    vitro:displayRankAnnot
+            "20"^^xsd:int ;
     vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupoverview .
 
 dct:publisher
