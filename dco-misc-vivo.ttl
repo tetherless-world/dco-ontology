@@ -10,11 +10,6 @@ dc:
       vitro:ontologyPrefixAnnot
               "dc"^^xsd:string .
 
-dct:
-      rdfs:label "Dublin Core Terms"@en-US ;
-      vitro:ontologyPrefixAnnot
-              "dct"^^xsd:string .
-
 dct:isReferencedBy
       a       owl:ObjectProperty ;
       rdfs:label "is referenced by"@en-US ;
