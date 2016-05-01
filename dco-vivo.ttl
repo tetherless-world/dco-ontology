@@ -1873,3 +1873,33 @@ dco:cites
       vitro:displayLimitAnnot
               "5"^^xsd:int .
 
+dco:Contributor
+      ero:IAO_0000112 "Patrick West contributed information about the dataset"^^xsd:string ;
+      ero:IAO_0000115 "An agent who contributes to the creation of an entity such as a dataset"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupAgent> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+
+dco:Creator
+      ero:IAO_0000112 "Patrick West created the dataset from a Febrey Perot instrument"^^xsd:string ;
+      ero:IAO_0000115 "An agent that has created an entity such as a dataset"^^xsd:string ;
+      vitro:displayLimitAnnot
+              "-1"^^xsd:int ;
+      vitro:displayRankAnnot
+              "-1"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupAgent> ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
+

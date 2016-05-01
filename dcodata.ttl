@@ -135,3 +135,17 @@ dcodata:DataRepository
       a collection of datasets
       """^^rdf:XMLLiteral .
 
+dco:Contributor
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dcodata:Dataset ;
+                owl:onProperty core:relates
+              ] .
+
+dco:Creator
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dcodata:Dataset ;
+                owl:onProperty core:relates
+              ] .
+

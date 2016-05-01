@@ -1640,3 +1640,23 @@ dco:cites
       The entity has a specific reference, such as a quotation or dataset, from another entity
       """^^rdf:XMLLiteral .
 
+dco:Contributor
+      a       owl:Class ;
+      rdfs:label "Contributor"@en-US ;
+      rdfs:subClassOf core:Relationship ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom foaf:Agent ;
+                owl:onProperty core:relates
+              ] .
+
+dco:Creator
+      a       owl:Class ;
+      rdfs:label "Creator"@en-US ;
+      rdfs:subClassOf core:Relationship ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom foaf:Agent ;
+                owl:onProperty core:relates
+              ] .
+
