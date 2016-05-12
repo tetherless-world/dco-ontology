@@ -101,74 +101,242 @@ dct:modified
     vitro:inPropertyGroupAnnot vivo:vitroPropertyGroupoverview .
 
 dct:Period
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:Frequency
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:LicenseDocument
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:SizeOrDuration
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:AgentClass
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:Location
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:LinguisticSystem
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:MethodOfAccrual
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:LocationPeriodOrJurisdiction
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:RightsStatement
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:Agent
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:ProvenanceStatement
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:Standard
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:FileFormat
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:MethodOfInstruction
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:PhysicalResource
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:PeriodOfTime
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:BibliographicResource
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:PhysicalMedium
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:MediaTypeOrExtent
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:Policy
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:MediaType
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:Frequency
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 
 dct:Jurisdiction
-    a owl:Class .
+    a owl:Class ;
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+    vitro:inClassGroup <http://info.deepcarbon.net/individual/vitroClassGroupThing> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+            <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> .
 

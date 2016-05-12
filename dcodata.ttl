@@ -139,13 +139,13 @@ dco:Contributor
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom dcodata:Dataset ;
-                owl:onProperty core:relates
+                owl:onProperty vivo:relates
               ] .
 
 dco:Creator
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom dcodata:Dataset ;
-                owl:onProperty core:relates
+                owl:onProperty vivo:relates
               ] .
 
