@@ -21,7 +21,7 @@ dcodata:Dataset
       rdfs:comment """
       A collection of data, published or curated by a single agent, and available for access or download in one or more formats
       """^^rdfs:XMLLiteral ;
-      rdfs:label "DCO Dataset"@en-US ;
+      rdfs:label "Dataset"@en-US ;
       rdfs:subClassOf dco:Object , prov:Entity , dcat:Dataset ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
