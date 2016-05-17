@@ -1,0 +1,151 @@
+@prefix dco:     <http://info.deepcarbon.net/schema#> .
+@prefix dcodata:  <http://info.deepcarbon.net/data/schema#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix vivo:    <http://vivoweb.org/ontology/core#> .
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+
+<http://info.deepcarbon.net/data/schema>
+      a       owl:Ontology ;
+      rdfs:label "DCO Data"@en-US .
+
+dcodata:Dataset
+      a       owl:Class ;
+      rdfs:comment """
+      A collection of data, published or curated by a single agent, and available for access or download in one or more formats
+      """^^rdfs:XMLLiteral ;
+      rdfs:label "Dataset"@en-US ;
+      rdfs:subClassOf dco:Object , prov:Entity , dcat:Dataset ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:Team ;
+                owl:onProperty dco:associatedDCOTeam
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty dct:description
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom foaf:Agent ;
+                owl:onProperty dct:publisher
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dct:PeriodOfTime ;
+                owl:onProperty dct:temporal
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom vivo:Project ;
+                owl:onProperty dco:relatedProject
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom vivo:GeographicRegion ;
+                owl:onProperty dct:spatial
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dcodata:Distribution ;
+                owl:onProperty dcat:distribution
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:ResearchCommunity ;
+                owl:onProperty dco:associatedDCOCommunity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:DataType ;
+                owl:onProperty dco:hasDataType
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dct:Frequency ;
+                owl:onProperty dct:accrualPeriodicity
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty dct:identifier
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dco:PointOfContact ;
+                owl:onProperty dco:hasPointOfContact
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom bibo:Document ;
+                owl:onProperty prov:wasQuotedFrom
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:date ;
+                owl:onProperty dct:issued
+              ] .
+
+dcodata:Distribution
+      a       owl:Class ;
+      rdfs:comment """
+      Represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset or different endpoints. Examples of distributions include a downloadable CSV file, an API or an RSS feed
+      """^^rdfs:XMLLiteral ;
+      rdfs:label "DCO Distribution"@en-US ;
+      rdfs:subClassOf dco:Object , prov:Entity , dcat:Distribution ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dct:RightsStatement ;
+                owl:onProperty dct:rights
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:date ;
+                owl:onProperty dct:issued
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dct:MediaTypeOrExtent ;
+                owl:onProperty dct:format
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dct:LicenseDocument ;
+                owl:onProperty dct:license
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom xsd:string ;
+                owl:onProperty dct:description
+              ] .
+
+dcodata:DataRepository
+      a       owl:Class ;
+      rdfs:label "Data Repository"@en-US ;
+      rdfs:subClassOf dco:Repository , dcat:Catalog ;
+      rdfs:comment  """
+      a collection of datasets
+      """^^rdf:XMLLiteral .
+
+dco:Contributor
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dcodata:Dataset ;
+                owl:onProperty vivo:relates
+              ] .
+
+dco:Creator
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dcodata:Dataset ;
+                owl:onProperty vivo:relates
+              ] .
+

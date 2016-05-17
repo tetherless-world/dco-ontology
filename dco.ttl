@@ -833,6 +833,16 @@ dco:Repository
                 owl:allValuesFrom foaf:Organization ;
                 owl:onProperty dco:hostedByOrganization
               ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dct:LicenseDocument ;
+                owl:onProperty dct:license
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom dct:RightsStatement ;
+                owl:onProperty dct:rights
+              ] ;
       rdfs:comment  """
       a central location in which data is stored and managed
       """^^rdf:XMLLiteral .
@@ -1629,4 +1639,24 @@ dco:cites
       rdfs:comment """
       The entity has a specific reference, such as a quotation or dataset, from another entity
       """^^rdf:XMLLiteral .
+
+dco:Contributor
+      a       owl:Class ;
+      rdfs:label "Contributor"@en-US ;
+      rdfs:subClassOf core:Relationship ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom foaf:Agent ;
+                owl:onProperty core:relates
+              ] .
+
+dco:Creator
+      a       owl:Class ;
+      rdfs:label "Creator"@en-US ;
+      rdfs:subClassOf core:Relationship ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom foaf:Agent ;
+                owl:onProperty core:relates
+              ] .
 

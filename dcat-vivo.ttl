@@ -1,0 +1,128 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix ero:     <http://purl.obolibrary.org/obo/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/ns/dcat>
+      vitro:ontologyPrefixAnnot
+              "dcat"^^xsd:string .
+
+dcat:contactPoint
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:byteSize
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:size
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:bytes
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:dataDictionary
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:dataQuality
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:granularity
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+# Because we have to code this to display the right thing we need to hide this property and use the vivo coded property
+dcat:accessURL
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+# Because we have to code this to display the right thing we need to hide this property and use the vivo coded property
+dcat:downloadURL
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+
+dcat:mediaType
+    vitro:displayRankAnnot
+            "30"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+dcat:distribution
+      vitro:displayLimitAnnot
+              "5"^^xsd:int ;
+      vitro:displayRankAnnot
+              "5"^^xsd:int ;
+      vitro:hiddenFromDisplayBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:hiddenFromPublishBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> ;
+      vitro:offerCreateNewOptionAnnot
+              "true"^^xsd:boolean ;
+      vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+              <http://vitro.mannlib.cornell.edu/ns/vitro/role#public> ;
+      vitro:selectFromExistingAnnot
+              "true"^^xsd:boolean .
+
+dcat:keyword
+    vitro:displayRankAnnot
+            "13"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+dcat:theme
+    vitro:displayRankAnnot
+            "12"^^xsd:int ;
+    vitro:inPropertyGroupAnnot
+            <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+# Because we have to code this to display the right thing we need to hide this property and use the vivo coded property
+dcat:landingPage
+    vitro:hiddenFromDisplayBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:hiddenFromPublishBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> ;
+    vitro:prohibitedFromUpdateBelowRoleLevelAnnot
+        <http://vitro.mannlib.cornell.edu/ns/vitro/role#nobody> .
+

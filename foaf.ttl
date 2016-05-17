@@ -1,0 +1,14 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ns0: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix schema: <http://schema.org/> .
+
+foaf:Document
+  a rdfs:Class, owl:Class ;
+  rdfs:label "Document" ;
+  rdfs:comment "A document." ;
+  ns0:term_status "stable" ;
+  owl:equivalentClass schema:CreativeWork ;
+  rdfs:isDefinedBy foaf: ;
+  owl:disjointWith foaf:Organization .
