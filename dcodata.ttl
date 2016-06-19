@@ -135,17 +135,39 @@ dcodata:DataRepository
       a collection of datasets
       """^^rdf:XMLLiteral .
 
-dco:Contributor
+dcodata:Contributor
+      a       owl:Class ;
+      rdfs:label "Contributor"@en-US ;
+      rdfs:subClassOf owl:Thing , vivo:Relationship ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom dcodata:Dataset ;
-                owl:onProperty vivo:relates
-              ] .
+                owl:onProperty vivo:relates ;
+                owl:someValuesFrom dcodata:Dataset
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty vivo:relates ;
+                owl:someValuesFrom foaf:Agent
+              ] ;
+      rdfs:comment  """
+      An agent that has contributed to the creation of a dataset
+      """^^rdf:XMLLiteral .
 
-dco:Creator
+dcodata:Creator
+      a       owl:Class ;
+      rdfs:label "Creator"@en-US ;
+      rdfs:subClassOf owl:Thing , vivo:Relationship ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom dcodata:Dataset ;
-                owl:onProperty vivo:relates
-              ] .
+                owl:onProperty vivo:relates ;
+                owl:someValuesFrom dcodata:Dataset
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty vivo:relates ;
+                owl:someValuesFrom foaf:Agent
+              ] ;
+      rdfs:comment  """
+      An agent that has created a dataset
+      """^^rdf:XMLLiteral .
 
